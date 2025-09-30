@@ -12,7 +12,8 @@
       "Read(/C:\\Users\\emrem\\OneDrive/**)",
       "Read(/C:\\Users\\emrem\\OneDrive\\Desktop/**)",
       "Read(/C:\\Users\\emrem\\OneDrive\\Desktop/**)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
