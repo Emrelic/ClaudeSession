@@ -1,0 +1,7 @@
+{
+  "auto_prompt": "limit varmı",
+  "session_interval_hours": 5,
+  "enable_auto_session": true,
+  "start_time": "04:01",
+  "claude_executable": "claude"
+}

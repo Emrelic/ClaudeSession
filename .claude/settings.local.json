@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir)",
+      "Bash(where claude)",
+      "Bash(python test:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "Bash(echo $HOME)",
+      "Read(/C:\\Users\\emrem/**)",
+      "Read(/C:\\Users\\emrem\\OneDrive/**)",
+      "Read(/C:\\Users\\emrem\\OneDrive\\Desktop/**)",
+      "Read(/C:\\Users\\emrem\\OneDrive\\Desktop/**)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
