@@ -17,7 +17,8 @@
       "Bash(wmic process:*)",
       "Bash(tasklist:*)",
       "Bash(claude --print \"test\")",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "Bash(powershell:*)"
     ],
     "deny": [],
     "ask": []

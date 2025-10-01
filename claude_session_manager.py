@@ -44,7 +44,68 @@ class ClaudeSessionManager:
             "session_interval_hours": 5,
             "enable_auto_session": True,
             "start_time": "08:00",
-            "claude_executable": "claude"
+            "claude_executable": "claude",
+            "work_protocols": """● 🔧 ÇALIŞMA PROTOKOLLERI
+
+📝 NOT DEFTERLERİ PROTOKOLÜ
+
+- "ntk" komutu: Tüm .md uzantılı not defterlerini okur
+- Dosyalar: CLAUDE.md + diğer tüm .md dosyaları projeye dahil
+- "Not defterleri" = .md dosyaları: Markdown uzantılı tüm dokümanlar
+
+📋 YAPILACAKLAR NOT DEFTERİ
+
+- "ynd" komutu: Yeni madde ekle (Yapılacaklar Not Defteri)
+- Dosya: YAPILACAKLAR.md
+- Format: [Kullanıcı madde] + ynd → otomatik kayıt
+- Otomatik tarih: Her maddeye tarih damgası eklenir
+
+📝 PROMPT GÜNLÜĞÜ SİSTEMİ
+
+ZORUNLU KURAL: Her kullanıcı promptu PROMPT_GUNLUGU.md dosyasına otomatik kaydedilmeli. Manuel "promptu ekle"
+talebi beklemeden, her prompt otomatik olarak günlüğe işlenmelidir.
+- Dosya: PROMPT_GUNLUGU.md
+- Format: [Tarih-Saat] Prompt İçeriği
+- Otomatik: Kullanıcı talebi olmadan tüm promptlar kaydedilir
+- Kronolojik: En yeni promptlar en üstte
+
+🔄 BERABER ÇALIŞMA PROTOKOLÜ
+
+1. 🔧 Otomatik Build & Deploy:
+  - Her yenilik → APK build → telefona yükleme
+  - Kullanıcı sorgulamaz, otomatik yapılır
+2. 🔊 SİSTEM BEEP PROTOKOLÜ:
+  - Temel kurallar:
+      - Soru sorulacağı zaman → 3x beep
+    - Onay alınacağı zaman → 3x beep
+    - Sonuç sunulacağı zaman → 3x beep
+    - Etkileşim gerekince → 3x beep
+    - Görev bitirip sunacağı zaman → 3x beep
+    - 1,2,3 tuş seçenekleri sunacağı zaman → 3x beep
+  - Ses Formatı:
+powershell -c "[Console]::Beep(800,300); [Console]::Beep(800,300); [Console]::Beep(800,300)"
+3. 💾 Hızlı Commit Protokolü:
+  - "tmm" diyince → anında commit + push
+  - "[özellik adı] tamam" diyince → commit + push
+
+🔥 YILDIZLI KOMUT SİSTEMİ (*)
+
+- *"p" = Bu prompt'u günlüğe ekle
+- *"btş" = Beep protokolü uyguladığın için teşekkür
+- *"btk" = Beep protokolünü uygulamadığın için tenkid
+- *"tmm" = Bu özellik tamam, commit + push yap
+- *"ab" = APK build et
+- *"bty" = Build et telefona yükle
+- *"ty" = Telefona yükle (APK install)
+- *"mo" = md uzantılı not defterlerini oku
+
+📋 HER AÇILIŞTA YAPILACAKLAR:
+
+1. CLAUDE.md dosyasını oku ve projeyi anla
+2. Önceki konuşmaları ve gelişmeleri kontrol et
+3. Güncel proje durumunu değerlendir
+4. Sistem sesi protokolü: Görev tamamlandığında 3 kere beep sesi çıkar
+5. Otomatik onay protokolü: Kullanıcıdan onay almadan işlemlere devam et"""
         }
         
         if os.path.exists(self.config_file):
@@ -517,6 +578,9 @@ class ClaudeSessionGUI:
         ttk.Button(buttons_frame, text="Sohbet Geçmişi", 
                   command=self.show_chat_history).pack(side=tk.LEFT, padx=5)
         
+        ttk.Button(buttons_frame, text="Çalışma Protokolleri", 
+                  command=self.show_work_protocols).pack(side=tk.LEFT, padx=5)
+        
         log_frame = ttk.LabelFrame(main_frame, text="Log", padding="5")
         log_frame.grid(row=8, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(10, 0))
         log_frame.columnconfigure(0, weight=1)
@@ -953,6 +1017,157 @@ class ClaudeSessionGUI:
         
         # İlk yükleme
         refresh_chat()
+    
+    def show_work_protocols(self):
+        protocols_window = tk.Toplevel(self.root)
+        protocols_window.title("Çalışma Protokolleri")
+        protocols_window.geometry("800x700")
+        protocols_window.transient(self.root)
+        protocols_window.grab_set()
+        
+        frame = ttk.Frame(protocols_window, padding="10")
+        frame.pack(fill=tk.BOTH, expand=True)
+        
+        ttk.Label(frame, text="Çalışma Protokolleri", font=("Arial", 16, "bold")).pack(pady=(0, 10))
+        
+        # Bilgi metni
+        info_frame = ttk.Frame(frame)
+        info_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        info_text = ttk.Label(info_frame, 
+                             text="Bu bölümde çalışma protokollerinizi düzenleyebilirsiniz. Protokoller otomatik olarak kaydedilir.",
+                             foreground="gray", font=("Arial", 9))
+        info_text.pack(anchor=tk.W)
+        
+        # Metin editörü
+        text_frame = ttk.Frame(frame)
+        text_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
+        
+        protocols_text = tk.Text(text_frame, height=30, width=80, wrap=tk.WORD, 
+                                font=("Consolas", 10), undo=True, maxundo=20)
+        protocols_scrollbar = ttk.Scrollbar(text_frame, orient=tk.VERTICAL, command=protocols_text.yview)
+        protocols_text.configure(yscrollcommand=protocols_scrollbar.set)
+        
+        protocols_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        protocols_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        # Mevcut protokolleri yükle
+        current_protocols = self.manager.config.get("work_protocols", "")
+        protocols_text.insert(1.0, current_protocols)
+        
+        # Butonlar
+        button_frame = ttk.Frame(frame)
+        button_frame.pack(fill=tk.X, pady=(10, 0))
+        
+        def save_protocols():
+            new_protocols = protocols_text.get(1.0, tk.END).strip()
+            config = self.manager.config.copy()
+            config["work_protocols"] = new_protocols
+            self.manager.save_config(config)
+            self.log_message("Çalışma protokolleri kaydedildi")
+            messagebox.showinfo("Başarılı", "Çalışma protokolleri başarıyla kaydedildi!")
+        
+        def reset_protocols():
+            if messagebox.askyesno("Onay", "Protokolleri varsayılan haline döndürmek istediğinizden emin misiniz?"):
+                default_protocols = """● 🔧 ÇALIŞMA PROTOKOLLERI
+
+📝 NOT DEFTERLERİ PROTOKOLÜ
+
+- "ntk" komutu: Tüm .md uzantılı not defterlerini okur
+- Dosyalar: CLAUDE.md + diğer tüm .md dosyaları projeye dahil
+- "Not defterleri" = .md dosyaları: Markdown uzantılı tüm dokümanlar
+
+📋 YAPILACAKLAR NOT DEFTERİ
+
+- "ynd" komutu: Yeni madde ekle (Yapılacaklar Not Defteri)
+- Dosya: YAPILACAKLAR.md
+- Format: [Kullanıcı madde] + ynd → otomatik kayıt
+- Otomatik tarih: Her maddeye tarih damgası eklenir
+
+📝 PROMPT GÜNLÜĞÜ SİSTEMİ
+
+ZORUNLU KURAL: Her kullanıcı promptu PROMPT_GUNLUGU.md dosyasına otomatik kaydedilmeli. Manuel "promptu ekle"
+talebi beklemeden, her prompt otomatik olarak günlüğe işlenmelidir.
+- Dosya: PROMPT_GUNLUGU.md
+- Format: [Tarih-Saat] Prompt İçeriği
+- Otomatik: Kullanıcı talebi olmadan tüm promptlar kaydedilir
+- Kronolojik: En yeni promptlar en üstte
+
+🔄 BERABER ÇALIŞMA PROTOKOLÜ
+
+1. 🔧 Otomatik Build & Deploy:
+  - Her yenilik → APK build → telefona yükleme
+  - Kullanıcı sorgulamaz, otomatik yapılır
+2. 🔊 SİSTEM BEEP PROTOKOLÜ:
+  - Temel kurallar:
+      - Soru sorulacağı zaman → 3x beep
+    - Onay alınacağı zaman → 3x beep
+    - Sonuç sunulacağı zaman → 3x beep
+    - Etkileşim gerekince → 3x beep
+    - Görev bitirip sunacağı zaman → 3x beep
+    - 1,2,3 tuş seçenekleri sunacağı zaman → 3x beep
+  - Ses Formatı:
+powershell -c "[Console]::Beep(800,300); [Console]::Beep(800,300); [Console]::Beep(800,300)"
+3. 💾 Hızlı Commit Protokolü:
+  - "tmm" diyince → anında commit + push
+  - "[özellik adı] tamam" diyince → commit + push
+
+🔥 YILDIZLI KOMUT SİSTEMİ (*)
+
+- *"p" = Bu prompt'u günlüğe ekle
+- *"btş" = Beep protokolü uyguladığın için teşekkür
+- *"btk" = Beep protokolünü uygulamadığın için tenkid
+- *"tmm" = Bu özellik tamam, commit + push yap
+- *"ab" = APK build et
+- *"bty" = Build et telefona yükle
+- *"ty" = Telefona yükle (APK install)
+- *"mo" = md uzantılı not defterlerini oku
+
+📋 HER AÇILIŞTA YAPILACAKLAR:
+
+1. CLAUDE.md dosyasını oku ve projeyi anla
+2. Önceki konuşmaları ve gelişmeleri kontrol et
+3. Güncel proje durumunu değerlendir
+4. Sistem sesi protokolü: Görev tamamlandığında 3 kere beep sesi çıkar
+5. Otomatik onay protokolü: Kullanıcıdan onay almadan işlemlere devam et"""
+                protocols_text.delete(1.0, tk.END)
+                protocols_text.insert(1.0, default_protocols)
+                self.log_message("Protokoller varsayılan haline döndürüldü")
+        
+        def export_protocols():
+            try:
+                protocols_content = protocols_text.get(1.0, tk.END).strip()
+                export_file = f"work_protocols_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+                with open(export_file, 'w', encoding='utf-8') as f:
+                    f.write("Claude Session Manager - Çalışma Protokolleri\n")
+                    f.write(f"Export Tarihi: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+                    f.write("="*80 + "\n\n")
+                    f.write(protocols_content)
+                
+                messagebox.showinfo("Başarılı", f"Çalışma protokolleri {export_file} dosyasına aktarıldı")
+                self.log_message(f"Çalışma protokolleri {export_file} dosyasına aktarıldı")
+            except Exception as e:
+                messagebox.showerror("Hata", f"Export hatası: {str(e)}")
+        
+        ttk.Button(button_frame, text="Kaydet", command=save_protocols).pack(side=tk.LEFT, padx=5)
+        ttk.Button(button_frame, text="Varsayılana Döndür", command=reset_protocols).pack(side=tk.LEFT, padx=5)
+        ttk.Button(button_frame, text="Export Et", command=export_protocols).pack(side=tk.LEFT, padx=5)
+        ttk.Button(button_frame, text="Kapat", command=protocols_window.destroy).pack(side=tk.RIGHT, padx=5)
+        
+        # Otomatik kayıt (her 30 saniyede bir)
+        def auto_save():
+            try:
+                if protocols_window.winfo_exists():
+                    new_protocols = protocols_text.get(1.0, tk.END).strip()
+                    if new_protocols != self.manager.config.get("work_protocols", ""):
+                        config = self.manager.config.copy()
+                        config["work_protocols"] = new_protocols
+                        self.manager.save_config(config)
+                    protocols_window.after(30000, auto_save)
+            except:
+                pass
+        
+        protocols_window.after(30000, auto_save)
     
     def run(self):
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
