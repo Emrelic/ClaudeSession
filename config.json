@@ -1,7 +1,7 @@
 {
   "auto_prompt": "limit varmı",
-  "session_interval_hours": 5,
+  "session_interval_hours": 1,
   "enable_auto_session": true,
-  "start_time": "04:01",
-  "claude_executable": "claude"
+  "start_time": "22:30",
+  "claude_executable": "C:\\Users\\emrem\\AppData\\Roaming\\npm\\claude.cmd"
 }

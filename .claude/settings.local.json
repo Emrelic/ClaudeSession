@@ -13,7 +13,11 @@
       "Read(/C:\\Users\\emrem\\OneDrive\\Desktop/**)",
       "Read(/C:\\Users\\emrem\\OneDrive\\Desktop/**)",
       "Bash(git add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(wmic process:*)",
+      "Bash(tasklist:*)",
+      "Bash(claude --print \"test\")",
+      "Bash(timeout:*)"
     ],
     "deny": [],
     "ask": []

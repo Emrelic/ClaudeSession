@@ -1,0 +1,153 @@
+{
+  "hourly_reports": [
+    {
+      "timestamp": "2025-09-30T22:10:35.613496",
+      "hour": 22,
+      "date": "2025-09-30",
+      "session_count": 0,
+      "auto_session_active": false
+    },
+    {
+      "timestamp": "2025-09-30T22:23:13.517532",
+      "hour": 22,
+      "date": "2025-09-30",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-09-30T23:23:44.011849",
+      "hour": 23,
+      "date": "2025-09-30",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T00:23:44.212771",
+      "hour": 0,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T01:23:45.171640",
+      "hour": 1,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T01:24:39.585312",
+      "hour": 1,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T01:54:01.619092",
+      "hour": 1,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T02:23:45.840359",
+      "hour": 2,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T03:23:46.725367",
+      "hour": 3,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T04:23:47.621856",
+      "hour": 4,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T05:23:48.533811",
+      "hour": 5,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T06:23:49.388285",
+      "hour": 6,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T07:35:13.017077",
+      "hour": 7,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T08:35:13.941470",
+      "hour": 8,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T10:33:33.092259",
+      "hour": 10,
+      "date": "2025-10-01",
+      "session_count": 0,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T10:41:36.681110",
+      "hour": 10,
+      "date": "2025-10-01",
+      "session_count": 1,
+      "auto_session_active": false
+    },
+    {
+      "timestamp": "2025-10-01T10:51:47.480730",
+      "hour": 10,
+      "date": "2025-10-01",
+      "session_count": 3,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T10:59:11.011073",
+      "hour": 10,
+      "date": "2025-10-01",
+      "session_count": 3,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T11:10:25.167113",
+      "hour": 11,
+      "date": "2025-10-01",
+      "session_count": 3,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T12:53:02.372381",
+      "hour": 12,
+      "date": "2025-10-01",
+      "session_count": 5,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-01T13:53:03.297937",
+      "hour": 13,
+      "date": "2025-10-01",
+      "session_count": 5,
+      "auto_session_active": true
+    }
+  ],
+  "daily_summary": {},
+  "last_check_time": "2025-10-01T13:53:03.297937"
+}
