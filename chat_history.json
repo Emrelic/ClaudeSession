@@ -5,5 +5,33 @@
     "response": "HATA: ",
     "type": "auto",
     "success": false
+  },
+  {
+    "timestamp": "2025-10-02T01:46:55.055872",
+    "prompt": "saat kaç",
+    "response": "01:46\n",
+    "type": "auto",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-02T01:46:55.056358",
+    "prompt": "saat kaç",
+    "response": "01:46\n",
+    "type": "manual",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-02T01:49:15.269526",
+    "prompt": "bu uygulamanın amacı nedir",
+    "response": "Bu uygulama **Claude Session Manager** - Claude Code iÃ§in otomatik session yÃ¶netim sistemidir. \n\nTemel amacÄ±: Claude Code'un gÃ¼nlÃ¼k token limitlerinden maksimum verim almak iÃ§in otomatik olarak belirli aralÄ±klarla (varsayÄ±lan 5 saatte bir) yeni sessionlar baÅŸlatmak.\n\nAna iÅŸlevleri:\n- Belirlenen saatlerde otomatik session baÅŸlatma\n- GUI arayÃ¼zÃ¼ ile kolay yÃ¶netim \n- Session durumu ve kalan sÃ¼re takibi\n- Manuel session kontrolÃ¼\n- Ã–zelleÅŸtirilebilir ayarlar\n\nÃ–rnek kullanÄ±m senaryosu: Tokeniniz gece bitiÄŸi durumda, sistem sabah otomatik olarak fresh tokenlerle yeni session baÅŸlatÄ±r.\n",
+    "type": "auto",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-02T01:49:15.270374",
+    "prompt": "bu uygulamanın amacı nedir",
+    "response": "Bu uygulama **Claude Session Manager** - Claude Code iÃ§in otomatik session yÃ¶netim sistemidir. \n\nTemel amacÄ±: Claude Code'un gÃ¼nlÃ¼k token limitlerinden maksimum verim almak iÃ§in otomatik olarak belirli aralÄ±klarla (varsayÄ±lan 5 saatte bir) yeni sessionlar baÅŸlatmak.\n\nAna iÅŸlevleri:\n- Belirlenen saatlerde otomatik session baÅŸlatma\n- GUI arayÃ¼zÃ¼ ile kolay yÃ¶netim \n- Session durumu ve kalan sÃ¼re takibi\n- Manuel session kontrolÃ¼\n- Ã–zelleÅŸtirilebilir ayarlar\n\nÃ–rnek kullanÄ±m senaryosu: Tokeniniz gece bitiÄŸi durumda, sistem sabah otomatik olarak fresh tokenlerle yeni session baÅŸlatÄ±r.\n",
+    "type": "scheduled",
+    "success": true
   }
 ]

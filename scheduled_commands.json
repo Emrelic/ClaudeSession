@@ -1,85 +1,7 @@
 [
   {
-    "time": "22:14",
-    "command": "şu anda saat kaç",
-    "description": "",
-    "enabled": true
-  },
-  {
-    "time": "22:24",
-    "command": "deneme komutu",
-    "description": "",
-    "enabled": true
-  },
-  {
-    "time": "01:16",
-    "command": "çalıştır",
-    "description": "",
-    "enabled": true
-  },
-  {
     "time": "01:18",
     "command": "/cost",
-    "description": "",
-    "enabled": true
-  },
-  {
-    "time": "05:00",
-    "command": "programı komple denetle kontrol et",
-    "description": "",
-    "enabled": true
-  },
-  {
-    "time": "06:00",
-    "command": "/status",
-    "description": "",
-    "enabled": true
-  },
-  {
-    "time": "10:34",
-    "command": "commit push yap",
-    "description": "",
-    "enabled": true
-  },
-  {
-    "time": "10:45",
-    "command": "saat şu anda 10:45 mi",
-    "description": "saat şu anda 10:45 mi",
-    "enabled": true
-  },
-  {
-    "time": "10:50",
-    "command": "şu anda saat 10:50 mi",
-    "description": "",
-    "enabled": true
-  },
-  {
-    "time": "10:52",
-    "command": "/usage",
-    "description": "usage komutunu çalıştır",
-    "enabled": true
-  },
-  {
-    "time": "10:53",
-    "command": "nasılsın iyimisin claude",
-    "description": "",
-    "enabled": true
-  },
-  {
-    "time": "10:54",
-    "command": "senden daha iyi bir editör varmı",
-    "description": "",
-    "enabled": true
-  },
-  {
-    "time": "10:55",
-    "command": "chatgpt mi yoksa sen mi daha iyisin claude",
-    "description": "",
-    "enabled": true
-  },
-  {
-    "time": "11:01",
-    "command": "öalışıyormu bu komut duyuyormusun beni",
     "description": "",
     "enabled": true
   },
@@ -108,33 +30,33 @@
     "enabled": true
   },
   {
-    "time": "11:44",
-    "command": "TEST: Scheduler çalışıyor mu?",
-    "description": "Test",
-    "enabled": true
-  },
-  {
-    "time": "11:46",
-    "command": "FINAL TEST: Şimdi çalışıyor mu?",
-    "description": "Final Test",
-    "enabled": true
-  },
-  {
     "time": "11:55",
     "command": "şu anda saat kaç",
     "description": "",
     "enabled": true
   },
   {
-    "time": "11:56",
-    "command": "bu sistem çalışıyormu claude sesimi duyuyormu",
+    "time": "01:44",
+    "command": "saat kaç",
     "description": "",
     "enabled": true
   },
   {
-    "time": "11:57",
-    "command": "en büyük futbol takımı kim",
-    "description": "",
+    "time": "01:46",
+    "command": "saat kaç",
+    "description": "sat kaç",
+    "enabled": true
+  },
+  {
+    "time": "01:49",
+    "command": "bu uygulamanın amacı nedir",
+    "description": "bu uygulamanın amacı nedir",
+    "enabled": true
+  },
+  {
+    "time": "01:50",
+    "command": "bu uygulama ne uygulamasıdır",
+    "description": "bu uygulama ne uygulamasıdır",
     "enabled": true
   }
 ]

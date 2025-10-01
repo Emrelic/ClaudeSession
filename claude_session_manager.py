@@ -11,6 +11,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox, simpledialog
 import schedule
 from dataclasses import dataclass
+import tempfile
 
 @dataclass
 class ScheduledCommand:
@@ -45,6 +46,10 @@ class ClaudeSessionManager:
             "enable_auto_session": True,
             "start_time": "08:00",
             "claude_executable": "claude",
+            "auto_response_enabled": True,
+            "default_choice": "1",
+            "auto_execute_code": True,
+            "allowed_languages": ["python", "bash", "cmd", "powershell"],
             "work_protocols": """● 🔧 ÇALIŞMA PROTOKOLLERI
 
 📝 NOT DEFTERLERİ PROTOKOLÜ
@@ -231,6 +236,183 @@ powershell -c "[Console]::Beep(800,300); [Console]::Beep(800,300); [Console]::Be
         
         self.save_chat_history()
     
+    def analyze_claude_response(self, response: str) -> Dict[str, Any]:
+        """Claude yanıtını analiz eder ve otomatik aksiyonlar önerir"""
+        analysis = {
+            "has_choices": False,
+            "choices": [],
+            "has_code": False,
+            "code_blocks": [],
+            "needs_response": False,
+            "suggested_action": None
+        }
+        
+        # Seçenek kontrolü (1, 2, 3 / yes, no vb.)
+        choice_patterns = [
+            r'(?:^|\n)\s*([1-3])[.)]\s*(.+?)(?=\n|$)',
+            r'(?:^|\n)\s*(yes|no|y|n)\s*[:-]?\s*(.+?)(?=\n|$)',
+            r'(?:^|\n)\s*([abc])[.)]\s*(.+?)(?=\n|$)'
+        ]
+        
+        for pattern in choice_patterns:
+            matches = re.findall(pattern, response, re.IGNORECASE | re.MULTILINE)
+            if len(matches) >= 2:
+                analysis["has_choices"] = True
+                analysis["choices"] = [(match[0], match[1].strip()) for match in matches]
+                analysis["needs_response"] = True
+                analysis["suggested_action"] = self.config.get("default_choice", "1")
+                break
+        
+        # Kod bloğu kontrolü
+        code_patterns = [
+            r'```(\w+)?\n(.*?)\n```',
+            r'`([^`\n]+)`',
+            r'(?:^|\n)\s*(\$|>)\s*(.+?)(?=\n|$)'
+        ]
+        
+        for pattern in code_patterns:
+            matches = re.findall(pattern, response, re.DOTALL | re.MULTILINE)
+            if matches:
+                for match in matches:
+                    if len(match) == 2:
+                        lang = match[0] if match[0] else "unknown"
+                        code = match[1].strip()
+                        if len(code) > 3:  # Çok kısa kod bloklarını görmezden gel
+                            analysis["has_code"] = True
+                            analysis["code_blocks"].append({
+                                "language": lang,
+                                "code": code
+                            })
+        
+        return analysis
+    
+    def auto_respond_to_claude(self, analysis: Dict[str, Any]) -> Optional[str]:
+        """Otomatik Claude yanıtı oluşturur"""
+        if not self.config.get("auto_response_enabled", False):
+            return None
+        
+        if analysis["has_choices"] and analysis["needs_response"]:
+            return analysis["suggested_action"]
+        
+        return None
+    
+    def execute_code_from_response(self, code_blocks: list) -> str:
+        """Claude yanıtındaki kod bloklarını çalıştırır"""
+        if not self.config.get("auto_execute_code", False):
+            return "Otomatik kod çalıştırma devre dışı"
+        
+        results = []
+        allowed_langs = self.config.get("allowed_languages", [])
+        
+        for block in code_blocks:
+            lang = block["language"].lower()
+            code = block["code"]
+            
+            if lang not in allowed_langs:
+                results.append(f"❌ {lang} dili otomatik çalıştırma için izinli değil")
+                continue
+            
+            try:
+                if lang in ["python", "py"]:
+                    result = self.execute_python_code(code)
+                elif lang in ["bash", "sh"]:
+                    result = self.execute_bash_code(code)
+                elif lang in ["cmd", "bat"]:
+                    result = self.execute_cmd_code(code)
+                elif lang in ["powershell", "ps1"]:
+                    result = self.execute_powershell_code(code)
+                else:
+                    result = f"❓ {lang} dili için executor bulunamadı"
+                
+                results.append(f"✅ {lang}: {result}")
+            except Exception as e:
+                results.append(f"❌ {lang} hatası: {str(e)}")
+        
+        return "\n".join(results) if results else "Çalıştırılabilir kod bulunamadı"
+    
+    def execute_python_code(self, code: str) -> str:
+        """Python kodunu güvenli şekilde çalıştırır"""
+        try:
+            with tempfile.NamedTemporaryFile(mode='w', suffix='.py', delete=False) as f:
+                f.write(code)
+                temp_file = f.name
+            
+            result = subprocess.run(
+                ['python', temp_file],
+                capture_output=True,
+                text=True,
+                timeout=10
+            )
+            
+            os.unlink(temp_file)
+            
+            if result.returncode == 0:
+                return result.stdout or "Kod başarıyla çalıştırıldı"
+            else:
+                return f"Hata: {result.stderr}"
+                
+        except Exception as e:
+            return f"Python execution hatası: {str(e)}"
+    
+    def execute_bash_code(self, code: str) -> str:
+        """Bash kodunu çalıştırır"""
+        try:
+            result = subprocess.run(
+                code,
+                shell=True,
+                capture_output=True,
+                text=True,
+                timeout=10
+            )
+            
+            if result.returncode == 0:
+                return result.stdout or "Komut başarıyla çalıştırıldı"
+            else:
+                return f"Hata: {result.stderr}"
+                
+        except Exception as e:
+            return f"Bash execution hatası: {str(e)}"
+    
+    def execute_cmd_code(self, code: str) -> str:
+        """CMD kodunu çalıştırır"""
+        try:
+            result = subprocess.run(
+                code,
+                shell=True,
+                capture_output=True,
+                text=True,
+                timeout=10,
+                cwd=os.getcwd()
+            )
+            
+            if result.returncode == 0:
+                return result.stdout or "Komut başarıyla çalıştırıldı"
+            else:
+                return f"Hata: {result.stderr}"
+                
+        except Exception as e:
+            return f"CMD execution hatası: {str(e)}"
+    
+    def execute_powershell_code(self, code: str) -> str:
+        """PowerShell kodunu çalıştırır"""
+        try:
+            ps_command = f'powershell -Command "{code}"'
+            result = subprocess.run(
+                ps_command,
+                shell=True,
+                capture_output=True,
+                text=True,
+                timeout=10
+            )
+            
+            if result.returncode == 0:
+                return result.stdout or "PowerShell komutu başarıyla çalıştırıldı"
+            else:
+                return f"Hata: {result.stderr}"
+                
+        except Exception as e:
+            return f"PowerShell execution hatası: {str(e)}"
+    
     def send_claude_prompt(self, prompt: str = None) -> tuple[bool, str]:
         if prompt is None:
             prompt = self.config["auto_prompt"]
@@ -248,10 +430,30 @@ powershell -c "[Console]::Beep(800,300); [Console]::Beep(800,300); [Console]::Be
                 self.calculate_next_session_time()
                 self.save_session_data()
                 
-                # Sohbet geçmişine ekle
-                self.add_chat_entry(prompt, result.stdout, "auto")
+                response = result.stdout
                 
-                return True, result.stdout
+                # Claude yanıtını analiz et
+                analysis = self.analyze_claude_response(response)
+                
+                # Otomatik yanıt kontrolü
+                auto_response = self.auto_respond_to_claude(analysis)
+                if auto_response:
+                    # Otomatik yanıt gönder
+                    follow_up_success, follow_up_response = self.send_claude_prompt(auto_response)
+                    if follow_up_success:
+                        response += f"\n\n[AUTO-RESPONSE: {auto_response}]\n{follow_up_response}"
+                    else:
+                        response += f"\n\n[AUTO-RESPONSE FAILED: {auto_response}]\n{follow_up_response}"
+                
+                # Kod çalıştırma kontrolü
+                if analysis["has_code"] and analysis["code_blocks"]:
+                    execution_result = self.execute_code_from_response(analysis["code_blocks"])
+                    response += f"\n\n[CODE EXECUTION]\n{execution_result}"
+                
+                # Sohbet geçmişine ekle
+                self.add_chat_entry(prompt, response, "auto")
+                
+                return True, response
             else:
                 # Hata durumunu da kaydet
                 self.add_chat_error(prompt, result.stderr, "auto")
@@ -499,8 +701,40 @@ class ClaudeSessionGUI:
     def __init__(self):
         self.manager = ClaudeSessionManager()
         self.root = tk.Tk()
-        self.root.title("Claude Session Manager")
-        self.root.geometry("700x600")
+        self.root.title("🤖 Claude Session Manager - Professional Edition")
+        self.root.geometry("1200x800")
+        self.root.configure(bg='#1a1a1a')
+        self.root.resizable(True, True)
+        
+        # Modern renkler ve tema
+        self.colors = {
+            'bg_primary': '#1a1a1a',       # Ana arkaplan - koyu siyah
+            'bg_secondary': '#2d2d2d',     # İkincil arkaplan - koyu gri
+            'bg_tertiary': '#3a3a3a',      # Üçüncül arkaplan - orta gri
+            'accent_blue': '#4A9EFF',      # Mavi vurgu
+            'accent_green': '#00C851',     # Yeşil vurgu
+            'accent_orange': '#FF8A00',    # Turuncu vurgu
+            'accent_red': '#FF4444',       # Kırmızı vurgu
+            'text_primary': '#FFFFFF',     # Ana metin - beyaz
+            'text_secondary': '#B0B0B0',   # İkincil metin - açık gri
+            'text_muted': '#808080',       # Soluk metin - orta gri
+            'button_primary': '#4A9EFF',   # Ana buton rengi
+            'button_hover': '#66B2FF',     # Hover rengi
+            'success': '#00C851',          # Başarı rengi
+            'warning': '#FF8A00',          # Uyarı rengi
+            'error': '#FF4444'             # Hata rengi
+        }
+        
+        # Modern fontlar
+        self.fonts = {
+            'title': ('Segoe UI', 18, 'bold'),
+            'subtitle': ('Segoe UI', 14, 'bold'),
+            'body': ('Segoe UI', 10),
+            'button': ('Segoe UI', 9, 'bold'),
+            'mono': ('Consolas', 10),
+            'mono_small': ('Consolas', 9)
+        }
+        
         self.setup_ui()
         self.update_status()
         self.update_clock()
@@ -510,124 +744,322 @@ class ClaudeSessionGUI:
             self.manager.start_scheduler()
             self.log_message("Scheduler otomatik başlatıldı")
         
+    def create_modern_button(self, parent, text, command, bg_color=None, width=15):
+        """Modern buton oluşturur"""
+        if bg_color is None:
+            bg_color = self.colors['button_primary']
+        
+        button = tk.Button(
+            parent,
+            text=text,
+            command=command,
+            font=self.fonts['button'],
+            bg=bg_color,
+            fg=self.colors['text_primary'],
+            activebackground=self.colors['button_hover'],
+            activeforeground=self.colors['text_primary'],
+            relief='flat',
+            borderwidth=0,
+            cursor='hand2',
+            width=width,
+            height=2
+        )
+        return button
+    
+    def create_status_card(self, parent, title, value, color=None):
+        """Modern durum kartı oluşturur"""
+        if color is None:
+            color = self.colors['text_secondary']
+        
+        card_frame = tk.Frame(parent, bg=self.colors['bg_secondary'], relief='flat', bd=1)
+        card_frame.pack(fill=tk.X, pady=2, padx=5)
+        
+        title_label = tk.Label(
+            card_frame, 
+            text=title,
+            font=self.fonts['body'],
+            bg=self.colors['bg_secondary'],
+            fg=self.colors['text_muted'],
+            anchor='w'
+        )
+        title_label.pack(side=tk.LEFT, padx=10, pady=5)
+        
+        value_label = tk.Label(
+            card_frame,
+            text=value,
+            font=self.fonts['body'],
+            bg=self.colors['bg_secondary'],
+            fg=color,
+            anchor='e'
+        )
+        value_label.pack(side=tk.RIGHT, padx=10, pady=5)
+        
+        return value_label
+    
     def setup_ui(self):
-        main_frame = ttk.Frame(self.root, padding="10")
-        main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        # Ana container
+        main_container = tk.Frame(self.root, bg=self.colors['bg_primary'])
+        main_container.pack(fill=tk.BOTH, expand=True, padx=0, pady=0)
         
-        self.root.columnconfigure(0, weight=1)
-        self.root.rowconfigure(0, weight=1)
-        main_frame.columnconfigure(1, weight=1)
+        # Header bölümü - gradient görünüm
+        header_frame = tk.Frame(main_container, bg=self.colors['bg_secondary'], height=80)
+        header_frame.pack(fill=tk.X, padx=0, pady=0)
+        header_frame.pack_propagate(False)
         
-        header_frame = ttk.Frame(main_frame)
-        header_frame.grid(row=0, column=0, columnspan=2, pady=(0, 20), sticky=(tk.W, tk.E))
-        header_frame.columnconfigure(1, weight=1)
+        # Header içeriği
+        header_content = tk.Frame(header_frame, bg=self.colors['bg_secondary'])
+        header_content.pack(fill=tk.BOTH, expand=True, padx=20, pady=10)
         
-        ttk.Label(header_frame, text="Claude Session Manager", 
-                 font=("Arial", 16, "bold")).grid(row=0, column=0, sticky=tk.W)
+        # Sol taraf - Başlık ve alt başlık
+        left_header = tk.Frame(header_content, bg=self.colors['bg_secondary'])
+        left_header.pack(side=tk.LEFT, fill=tk.Y)
         
-        self.clock_label = ttk.Label(header_frame, text="", 
-                                    font=("Arial", 14, "bold"), foreground="blue")
-        self.clock_label.grid(row=0, column=1, sticky=tk.E)
+        title_label = tk.Label(
+            left_header,
+            text="🤖 Claude Session Manager",
+            font=self.fonts['title'],
+            bg=self.colors['bg_secondary'],
+            fg=self.colors['accent_blue']
+        )
+        title_label.pack(anchor='w')
         
-        ttk.Label(main_frame, text="Durum:").grid(row=1, column=0, sticky=tk.W, pady=2)
-        self.status_label = ttk.Label(main_frame, text="Durumu kontrol ediliyor...")
-        self.status_label.grid(row=1, column=1, sticky=tk.W, pady=2)
+        subtitle_label = tk.Label(
+            left_header,
+            text="Professional AI Session Management",
+            font=self.fonts['body'],
+            bg=self.colors['bg_secondary'],
+            fg=self.colors['text_secondary']
+        )
+        subtitle_label.pack(anchor='w')
         
-        ttk.Label(main_frame, text="Son Session:").grid(row=2, column=0, sticky=tk.W, pady=2)
-        self.last_session_label = ttk.Label(main_frame, text="-")
-        self.last_session_label.grid(row=2, column=1, sticky=tk.W, pady=2)
+        # Sağ taraf - Saat
+        right_header = tk.Frame(header_content, bg=self.colors['bg_secondary'])
+        right_header.pack(side=tk.RIGHT, fill=tk.Y)
         
-        ttk.Label(main_frame, text="Sonraki Session:").grid(row=3, column=0, sticky=tk.W, pady=2)
-        self.next_session_label = ttk.Label(main_frame, text="-")
-        self.next_session_label.grid(row=3, column=1, sticky=tk.W, pady=2)
+        self.clock_label = tk.Label(
+            right_header,
+            text="",
+            font=self.fonts['subtitle'],
+            bg=self.colors['bg_secondary'],
+            fg=self.colors['accent_green']
+        )
+        self.clock_label.pack(anchor='e', pady=(10, 0))
         
-        ttk.Label(main_frame, text="Kalan Süre:").grid(row=4, column=0, sticky=tk.W, pady=2)
-        self.time_remaining_label = ttk.Label(main_frame, text="-")
-        self.time_remaining_label.grid(row=4, column=1, sticky=tk.W, pady=2)
+        # Ana içerik bölümü
+        content_frame = tk.Frame(main_container, bg=self.colors['bg_primary'])
+        content_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=10)
         
-        ttk.Label(main_frame, text="Session Sayısı:").grid(row=5, column=0, sticky=tk.W, pady=2)
-        self.session_count_label = ttk.Label(main_frame, text="0")
-        self.session_count_label.grid(row=5, column=1, sticky=tk.W, pady=2)
+        # Sol panel - Durum bilgileri
+        left_panel = tk.Frame(content_frame, bg=self.colors['bg_tertiary'], width=350)
+        left_panel.pack(side=tk.LEFT, fill=tk.Y, padx=(0, 10), pady=0)
+        left_panel.pack_propagate(False)
         
-        ttk.Label(main_frame, text="Token Kalan:").grid(row=6, column=0, sticky=tk.W, pady=2)
-        self.tokens_label = ttk.Label(main_frame, text="-")
-        self.tokens_label.grid(row=6, column=1, sticky=tk.W, pady=2)
+        # Durum başlığı
+        status_header = tk.Label(
+            left_panel,
+            text="📊 Sistem Durumu",
+            font=self.fonts['subtitle'],
+            bg=self.colors['bg_tertiary'],
+            fg=self.colors['text_primary'],
+            pady=15
+        )
+        status_header.pack(fill=tk.X)
         
-        buttons_frame = ttk.Frame(main_frame)
-        buttons_frame.grid(row=7, column=0, columnspan=2, pady=20, sticky=(tk.W, tk.E))
+        # Durum kartları
+        self.status_label = self.create_status_card(left_panel, "🔄 Sistem Durumu", "Kontrol ediliyor...", self.colors['warning'])
+        self.last_session_label = self.create_status_card(left_panel, "⏰ Son Session", "Henüz başlatılmadı", self.colors['text_secondary'])
+        self.next_session_label = self.create_status_card(left_panel, "⏭️ Sonraki Session", "Planlanmadı", self.colors['text_secondary'])
+        self.time_remaining_label = self.create_status_card(left_panel, "⏳ Kalan Süre", "-", self.colors['text_secondary'])
+        self.session_count_label = self.create_status_card(left_panel, "📈 Session Sayısı", "0", self.colors['accent_blue'])
+        self.tokens_label = self.create_status_card(left_panel, "🎯 Token Kalan", "-", self.colors['text_secondary'])
         
-        self.start_button = ttk.Button(buttons_frame, text="Otomatik Başlat", 
-                                      command=self.toggle_auto_session)
-        self.start_button.pack(side=tk.LEFT, padx=5)
+        # Sağ panel - Kontroller ve log
+        right_panel = tk.Frame(content_frame, bg=self.colors['bg_primary'])
+        right_panel.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
         
-        ttk.Button(buttons_frame, text="Manuel Session", 
-                  command=self.manual_session).pack(side=tk.LEFT, padx=5)
+        # Buton bölümü
+        buttons_section = tk.Frame(right_panel, bg=self.colors['bg_primary'])
+        buttons_section.pack(fill=tk.X, pady=(0, 20))
         
-        ttk.Button(buttons_frame, text="Ayarlar", 
-                  command=self.show_settings).pack(side=tk.LEFT, padx=5)
+        # Buton başlığı
+        buttons_header = tk.Label(
+            buttons_section,
+            text="🎮 Kontrol Paneli",
+            font=self.fonts['subtitle'],
+            bg=self.colors['bg_primary'],
+            fg=self.colors['text_primary']
+        )
+        buttons_header.pack(anchor='w', pady=(0, 15))
         
-        ttk.Button(buttons_frame, text="Durum Yenile", 
-                  command=self.update_status).pack(side=tk.LEFT, padx=5)
+        # Ana butonlar (birinci satır)
+        main_buttons_frame = tk.Frame(buttons_section, bg=self.colors['bg_primary'])
+        main_buttons_frame.pack(fill=tk.X, pady=(0, 10))
         
-        ttk.Button(buttons_frame, text="Zamanlı Komutlar", 
-                  command=self.show_scheduled_commands).pack(side=tk.LEFT, padx=5)
+        self.start_button = self.create_modern_button(
+            main_buttons_frame, "🚀 Otomatik Başlat", self.toggle_auto_session, 
+            self.colors['accent_green'], 18
+        )
+        self.start_button.pack(side=tk.LEFT, padx=(0, 10))
         
-        ttk.Button(buttons_frame, text="Kullanım Raporu", 
-                  command=self.show_usage_report).pack(side=tk.LEFT, padx=5)
+        manual_button = self.create_modern_button(
+            main_buttons_frame, "⚡ Manuel Session", self.manual_session,
+            self.colors['accent_blue'], 18
+        )
+        manual_button.pack(side=tk.LEFT, padx=(0, 10))
         
-        ttk.Button(buttons_frame, text="Sohbet Geçmişi", 
-                  command=self.show_chat_history).pack(side=tk.LEFT, padx=5)
+        terminal_button = self.create_modern_button(
+            main_buttons_frame, "🖥️ Terminal", self.show_terminal,
+            self.colors['bg_tertiary'], 15
+        )
+        terminal_button.pack(side=tk.LEFT)
         
-        ttk.Button(buttons_frame, text="Çalışma Protokolleri", 
-                  command=self.show_work_protocols).pack(side=tk.LEFT, padx=5)
+        # Yönetim butonları (ikinci satır)
+        mgmt_buttons_frame = tk.Frame(buttons_section, bg=self.colors['bg_primary'])
+        mgmt_buttons_frame.pack(fill=tk.X, pady=(0, 10))
         
-        log_frame = ttk.LabelFrame(main_frame, text="Log", padding="5")
-        log_frame.grid(row=8, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(10, 0))
-        log_frame.columnconfigure(0, weight=1)
-        log_frame.rowconfigure(0, weight=1)
+        settings_button = self.create_modern_button(
+            mgmt_buttons_frame, "⚙️ Ayarlar", self.show_settings,
+            self.colors['bg_tertiary'], 12
+        )
+        settings_button.pack(side=tk.LEFT, padx=(0, 5))
         
-        self.log_text = tk.Text(log_frame, height=8, width=50)
-        scrollbar = ttk.Scrollbar(log_frame, orient=tk.VERTICAL, command=self.log_text.yview)
-        self.log_text.configure(yscrollcommand=scrollbar.set)
+        refresh_button = self.create_modern_button(
+            mgmt_buttons_frame, "🔄 Yenile", self.update_status,
+            self.colors['bg_tertiary'], 12
+        )
+        refresh_button.pack(side=tk.LEFT, padx=(0, 5))
         
-        self.log_text.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
-        scrollbar.grid(row=0, column=1, sticky=(tk.N, tk.S))
+        scheduled_button = self.create_modern_button(
+            mgmt_buttons_frame, "⏰ Zamanlı", self.show_scheduled_commands,
+            self.colors['accent_orange'], 12
+        )
+        scheduled_button.pack(side=tk.LEFT, padx=(0, 5))
         
-        main_frame.rowconfigure(8, weight=1)
+        protocols_button = self.create_modern_button(
+            mgmt_buttons_frame, "📋 Protokoller", self.show_work_protocols,
+            self.colors['accent_orange'], 12
+        )
+        protocols_button.pack(side=tk.LEFT)
+        
+        # Raporlar (üçüncü satır)
+        reports_buttons_frame = tk.Frame(buttons_section, bg=self.colors['bg_primary'])
+        reports_buttons_frame.pack(fill=tk.X)
+        
+        usage_button = self.create_modern_button(
+            reports_buttons_frame, "📊 Kullanım", self.show_usage_report,
+            self.colors['bg_tertiary'], 12
+        )
+        usage_button.pack(side=tk.LEFT, padx=(0, 5))
+        
+        chat_button = self.create_modern_button(
+            reports_buttons_frame, "💬 Sohbet", self.show_chat_history,
+            self.colors['bg_tertiary'], 12
+        )
+        chat_button.pack(side=tk.LEFT)
+        
+        # Log bölümü
+        log_section = tk.Frame(right_panel, bg=self.colors['bg_primary'])
+        log_section.pack(fill=tk.BOTH, expand=True)
+        
+        # Log başlığı
+        log_header = tk.Label(
+            log_section,
+            text="📝 Sistem Günlüğü",
+            font=self.fonts['subtitle'],
+            bg=self.colors['bg_primary'],
+            fg=self.colors['text_primary']
+        )
+        log_header.pack(anchor='w', pady=(0, 10))
+        
+        # Log frame
+        log_frame = tk.Frame(log_section, bg=self.colors['bg_tertiary'], relief='flat', bd=1)
+        log_frame.pack(fill=tk.BOTH, expand=True)
+        
+        # Log text widget
+        self.log_text = tk.Text(
+            log_frame,
+            height=12,
+            font=self.fonts['mono_small'],
+            bg=self.colors['bg_tertiary'],
+            fg=self.colors['text_primary'],
+            insertbackground=self.colors['text_primary'],
+            selectbackground=self.colors['accent_blue'],
+            relief='flat',
+            borderwidth=5,
+            wrap=tk.WORD
+        )
+        
+        log_scrollbar = tk.Scrollbar(log_frame, orient=tk.VERTICAL, command=self.log_text.yview,
+                                    bg=self.colors['bg_secondary'], troughcolor=self.colors['bg_primary'])
+        self.log_text.configure(yscrollcommand=log_scrollbar.set)
+        
+        self.log_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=10, pady=10)
+        log_scrollbar.pack(side=tk.RIGHT, fill=tk.Y, padx=(0, 10), pady=10)
+        
+        # Log renk etiketleri
+        self.log_text.tag_configure("info", foreground=self.colors['accent_blue'])
+        self.log_text.tag_configure("success", foreground=self.colors['success'])
+        self.log_text.tag_configure("warning", foreground=self.colors['warning'])
+        self.log_text.tag_configure("error", foreground=self.colors['error'])
         
         self.root.after(5000, self.auto_update_status)
         self.root.after(1000, self.update_clock)
     
-    def log_message(self, message: str):
+    def log_message(self, message: str, level="info"):
         timestamp = datetime.now().strftime("%H:%M:%S")
-        self.log_text.insert(tk.END, f"[{timestamp}] {message}\n")
+        log_entry = f"[{timestamp}] {message}\n"
+        
+        # Mesaj tipine göre renk belirle
+        if "başarı" in message.lower() or "başlatıldı" in message.lower():
+            tag = "success"
+        elif "hata" in message.lower() or "fail" in message.lower():
+            tag = "error"
+        elif "uyarı" in message.lower() or "warning" in message.lower():
+            tag = "warning"
+        else:
+            tag = "info"
+            
+        self.log_text.insert(tk.END, log_entry, tag)
         self.log_text.see(tk.END)
     
     def update_status(self):
         status = self.manager.get_session_status()
         
+        # Sistem durumu güncelle
         if status["is_running"]:
-            self.status_label.config(text="Aktif", foreground="green")
-            self.start_button.config(text="Durdur")
+            self.status_label.config(text="🟢 Aktif", fg=self.colors['success'])
+            self.start_button.config(text="⏹️ Durdur", bg=self.colors['accent_red'])
         else:
-            self.status_label.config(text="Pasif", foreground="red")
-            self.start_button.config(text="Otomatik Başlat")
+            self.status_label.config(text="🔴 Pasif", fg=self.colors['error'])
+            self.start_button.config(text="🚀 Otomatik Başlat", bg=self.colors['accent_green'])
         
+        # Son session güncelle
         if status["last_session"]:
             last_time = datetime.fromisoformat(status["last_session"])
-            self.last_session_label.config(text=last_time.strftime("%Y-%m-%d %H:%M:%S"))
+            self.last_session_label.config(text=last_time.strftime("%d/%m/%Y %H:%M"), fg=self.colors['text_primary'])
         else:
-            self.last_session_label.config(text="Henüz başlatılmadı")
+            self.last_session_label.config(text="Henüz başlatılmadı", fg=self.colors['text_muted'])
         
+        # Sonraki session güncelle
         if status["next_session"]:
             next_time = datetime.fromisoformat(status["next_session"])
-            self.next_session_label.config(text=next_time.strftime("%Y-%m-%d %H:%M:%S"))
+            self.next_session_label.config(text=next_time.strftime("%d/%m/%Y %H:%M"), fg=self.colors['accent_blue'])
         else:
-            self.next_session_label.config(text="Planlanmadı")
+            self.next_session_label.config(text="Planlanmadı", fg=self.colors['text_muted'])
         
-        self.time_remaining_label.config(text=status.get("time_until_next", "-"))
-        self.session_count_label.config(text=str(status["session_count"]))
-        self.tokens_label.config(text=str(status.get("tokens_remaining", "-")))
+        # Kalan süre güncelle
+        time_remaining = status.get("time_until_next", "-")
+        if time_remaining != "-" and "Zamanı geldi" not in time_remaining:
+            self.time_remaining_label.config(text=time_remaining, fg=self.colors['accent_orange'])
+        else:
+            self.time_remaining_label.config(text=time_remaining, fg=self.colors['text_muted'])
+        
+        # Session sayısı güncelle
+        self.session_count_label.config(text=str(status["session_count"]), fg=self.colors['accent_blue'])
+        
+        # Token bilgisi güncelle
+        tokens = status.get("tokens_remaining", "-")
+        self.tokens_label.config(text=str(tokens), fg=self.colors['text_secondary'])
     
     def auto_update_status(self):
         self.update_status()
@@ -665,29 +1097,135 @@ class ClaudeSessionGUI:
     
     def show_settings(self):
         settings_window = tk.Toplevel(self.root)
-        settings_window.title("Ayarlar")
-        settings_window.geometry("400x300")
+        settings_window.title("⚙️ Gelişmiş Ayarlar")
+        settings_window.geometry("500x600")
+        settings_window.configure(bg=self.colors['bg_primary'])
         settings_window.transient(self.root)
         settings_window.grab_set()
         
-        frame = ttk.Frame(settings_window, padding="10")
-        frame.pack(fill=tk.BOTH, expand=True)
+        # Ana frame
+        main_frame = tk.Frame(settings_window, bg=self.colors['bg_primary'])
+        main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
         
-        ttk.Label(frame, text="Otomatik Prompt:").grid(row=0, column=0, sticky=tk.W, pady=5)
+        # Başlık
+        title_label = tk.Label(
+            main_frame,
+            text="⚙️ Sistem Ayarları",
+            font=self.fonts['title'],
+            bg=self.colors['bg_primary'],
+            fg=self.colors['accent_blue']
+        )
+        title_label.pack(pady=(0, 20))
+        
+        # Temel ayarlar bölümü
+        basic_frame = tk.LabelFrame(
+            main_frame,
+            text="📋 Temel Ayarlar",
+            font=self.fonts['subtitle'],
+            bg=self.colors['bg_secondary'],
+            fg=self.colors['text_primary'],
+            relief='flat',
+            bd=1
+        )
+        basic_frame.pack(fill=tk.X, pady=(0, 15))
+        
+        # Otomatik prompt
+        prompt_frame = tk.Frame(basic_frame, bg=self.colors['bg_secondary'])
+        prompt_frame.pack(fill=tk.X, padx=10, pady=5)
+        
+        tk.Label(prompt_frame, text="Otomatik Prompt:", font=self.fonts['body'],
+                bg=self.colors['bg_secondary'], fg=self.colors['text_primary']).pack(side=tk.LEFT)
         auto_prompt_var = tk.StringVar(value=self.manager.config["auto_prompt"])
-        ttk.Entry(frame, textvariable=auto_prompt_var, width=30).grid(row=0, column=1, pady=5)
+        tk.Entry(prompt_frame, textvariable=auto_prompt_var, width=25, font=self.fonts['body']).pack(side=tk.RIGHT)
         
-        ttk.Label(frame, text="Session Aralığı (saat):").grid(row=1, column=0, sticky=tk.W, pady=5)
+        # Session aralığı
+        interval_frame = tk.Frame(basic_frame, bg=self.colors['bg_secondary'])
+        interval_frame.pack(fill=tk.X, padx=10, pady=5)
+        
+        tk.Label(interval_frame, text="Session Aralığı (saat):", font=self.fonts['body'],
+                bg=self.colors['bg_secondary'], fg=self.colors['text_primary']).pack(side=tk.LEFT)
         interval_var = tk.StringVar(value=str(self.manager.config["session_interval_hours"]))
-        ttk.Entry(frame, textvariable=interval_var, width=30).grid(row=1, column=1, pady=5)
+        tk.Entry(interval_frame, textvariable=interval_var, width=25, font=self.fonts['body']).pack(side=tk.RIGHT)
         
-        ttk.Label(frame, text="Başlangıç Saati (HH:MM):").grid(row=2, column=0, sticky=tk.W, pady=5)
+        # Başlangıç saati
+        time_frame = tk.Frame(basic_frame, bg=self.colors['bg_secondary'])
+        time_frame.pack(fill=tk.X, padx=10, pady=5)
+        
+        tk.Label(time_frame, text="Başlangıç Saati (HH:MM):", font=self.fonts['body'],
+                bg=self.colors['bg_secondary'], fg=self.colors['text_primary']).pack(side=tk.LEFT)
         start_time_var = tk.StringVar(value=self.manager.config["start_time"])
-        ttk.Entry(frame, textvariable=start_time_var, width=30).grid(row=2, column=1, pady=5)
+        tk.Entry(time_frame, textvariable=start_time_var, width=25, font=self.fonts['body']).pack(side=tk.RIGHT)
         
+        # Temel checkboxlar
         auto_enable_var = tk.BooleanVar(value=self.manager.config["enable_auto_session"])
-        ttk.Checkbutton(frame, text="Otomatik session etkin", 
-                       variable=auto_enable_var).grid(row=3, column=0, columnspan=2, sticky=tk.W, pady=5)
+        tk.Checkbutton(
+            basic_frame, text="🚀 Otomatik session etkin", variable=auto_enable_var,
+            font=self.fonts['body'], bg=self.colors['bg_secondary'], fg=self.colors['text_primary'],
+            selectcolor=self.colors['bg_tertiary'], activebackground=self.colors['bg_secondary']
+        ).pack(anchor='w', padx=10, pady=5)
+        
+        # Otomatik yanıt bölümü
+        auto_frame = tk.LabelFrame(
+            main_frame,
+            text="🤖 Otomatik Yanıt Sistemi",
+            font=self.fonts['subtitle'],
+            bg=self.colors['bg_secondary'],
+            fg=self.colors['text_primary'],
+            relief='flat',
+            bd=1
+        )
+        auto_frame.pack(fill=tk.X, pady=(0, 15))
+        
+        # Otomatik yanıt etkinleştir
+        auto_response_var = tk.BooleanVar(value=self.manager.config.get("auto_response_enabled", True))
+        tk.Checkbutton(
+            auto_frame, text="🔄 Otomatik yanıt sistemi etkin", variable=auto_response_var,
+            font=self.fonts['body'], bg=self.colors['bg_secondary'], fg=self.colors['text_primary'],
+            selectcolor=self.colors['bg_tertiary'], activebackground=self.colors['bg_secondary']
+        ).pack(anchor='w', padx=10, pady=5)
+        
+        # Varsayılan seçim
+        choice_frame = tk.Frame(auto_frame, bg=self.colors['bg_secondary'])
+        choice_frame.pack(fill=tk.X, padx=10, pady=5)
+        
+        tk.Label(choice_frame, text="Varsayılan Seçim (1,2,3):", font=self.fonts['body'],
+                bg=self.colors['bg_secondary'], fg=self.colors['text_primary']).pack(side=tk.LEFT)
+        default_choice_var = tk.StringVar(value=self.manager.config.get("default_choice", "1"))
+        choice_combo = ttk.Combobox(choice_frame, textvariable=default_choice_var, 
+                                   values=["1", "2", "3", "yes", "no"], width=10)
+        choice_combo.pack(side=tk.RIGHT)
+        
+        # Kod çalıştırma bölümü
+        code_frame = tk.LabelFrame(
+            main_frame,
+            text="💻 Kod Çalıştırma Sistemi",
+            font=self.fonts['subtitle'],
+            bg=self.colors['bg_secondary'],
+            fg=self.colors['text_primary'],
+            relief='flat',
+            bd=1
+        )
+        code_frame.pack(fill=tk.X, pady=(0, 15))
+        
+        # Otomatik kod çalıştırma
+        auto_code_var = tk.BooleanVar(value=self.manager.config.get("auto_execute_code", True))
+        tk.Checkbutton(
+            code_frame, text="⚡ Otomatik kod çalıştırma etkin", variable=auto_code_var,
+            font=self.fonts['body'], bg=self.colors['bg_secondary'], fg=self.colors['text_primary'],
+            selectcolor=self.colors['bg_tertiary'], activebackground=self.colors['bg_secondary']
+        ).pack(anchor='w', padx=10, pady=5)
+        
+        # İzinli diller
+        lang_label = tk.Label(
+            code_frame, text="💡 İzinli Diller: Python, Bash, CMD, PowerShell",
+            font=self.fonts['mono_small'], bg=self.colors['bg_secondary'], 
+            fg=self.colors['text_muted']
+        )
+        lang_label.pack(anchor='w', padx=10, pady=2)
+        
+        # Butonlar
+        button_frame = tk.Frame(main_frame, bg=self.colors['bg_primary'])
+        button_frame.pack(fill=tk.X, pady=(20, 0))
         
         def save_settings():
             try:
@@ -696,11 +1234,23 @@ class ClaudeSessionGUI:
                 new_config["session_interval_hours"] = int(interval_var.get())
                 new_config["start_time"] = start_time_var.get()
                 new_config["enable_auto_session"] = auto_enable_var.get()
+                new_config["auto_response_enabled"] = auto_response_var.get()
+                new_config["default_choice"] = default_choice_var.get()
+                new_config["auto_execute_code"] = auto_code_var.get()
                 
+                # Saat formatını kontrol et
                 datetime.strptime(start_time_var.get(), "%H:%M")
                 
                 self.manager.save_config(new_config)
-                self.log_message("Ayarlar kaydedildi")
+                self.log_message("✅ Gelişmiş ayarlar kaydedildi", "success")
+                
+                # Başarı mesajı
+                messagebox.showinfo("Başarılı", 
+                    "🎉 Ayarlar başarıyla kaydedildi!\n\n"
+                    f"🤖 Otomatik yanıt: {'Açık' if auto_response_var.get() else 'Kapalı'}\n"
+                    f"⚡ Kod çalıştırma: {'Açık' if auto_code_var.get() else 'Kapalı'}\n"
+                    f"🎯 Varsayılan seçim: {default_choice_var.get()}")
+                
                 settings_window.destroy()
                 
                 if self.manager.is_running:
@@ -708,10 +1258,38 @@ class ClaudeSessionGUI:
                     self.manager.start_scheduler()
                     
             except ValueError as e:
-                messagebox.showerror("Hata", "Geçersiz değer girdiniz!")
+                messagebox.showerror("Hata", "⚠️ Geçersiz saat formatı! (HH:MM kullanın)")
+            except Exception as e:
+                messagebox.showerror("Hata", f"⚠️ Ayarlar kaydedilemedi: {str(e)}")
         
-        ttk.Button(frame, text="Kaydet", command=save_settings).grid(row=4, column=0, pady=20)
-        ttk.Button(frame, text="İptal", command=settings_window.destroy).grid(row=4, column=1, pady=20)
+        def reset_to_defaults():
+            if messagebox.askyesno("Onay", "🔄 Tüm ayarları varsayılan değerlere döndürmek istediğinizden emin misiniz?"):
+                auto_prompt_var.set("x")
+                interval_var.set("5")
+                start_time_var.set("08:00")
+                auto_enable_var.set(True)
+                auto_response_var.set(True)
+                default_choice_var.set("1")
+                auto_code_var.set(True)
+                self.log_message("🔄 Ayarlar varsayılana döndürüldü", "warning")
+        
+        save_button = self.create_modern_button(
+            button_frame, "💾 Kaydet", save_settings, 
+            self.colors['success'], 15
+        )
+        save_button.pack(side=tk.LEFT, padx=(0, 10))
+        
+        reset_button = self.create_modern_button(
+            button_frame, "🔄 Varsayılan", reset_to_defaults,
+            self.colors['warning'], 15
+        )
+        reset_button.pack(side=tk.LEFT, padx=(0, 10))
+        
+        cancel_button = self.create_modern_button(
+            button_frame, "❌ İptal", settings_window.destroy,
+            self.colors['bg_tertiary'], 15
+        )
+        cancel_button.pack(side=tk.RIGHT)
     
     def show_scheduled_commands(self):
         commands_window = tk.Toplevel(self.root)
@@ -1168,6 +1746,281 @@ powershell -c "[Console]::Beep(800,300); [Console]::Beep(800,300); [Console]::Be
                 pass
         
         protocols_window.after(30000, auto_save)
+    
+    def show_terminal(self):
+        terminal_window = tk.Toplevel(self.root)
+        terminal_window.title("Claude Session Manager - Terminal")
+        terminal_window.geometry("900x600")
+        terminal_window.transient(self.root)
+        terminal_window.grab_set()
+        
+        # Terminal için değişkenler
+        self.current_directory = os.getcwd()
+        self.command_history = []
+        self.history_index = -1
+        
+        frame = ttk.Frame(terminal_window, padding="10")
+        frame.pack(fill=tk.BOTH, expand=True)
+        
+        # Başlık
+        header_frame = ttk.Frame(frame)
+        header_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        ttk.Label(header_frame, text="🖥️ Gömülü Terminal", font=("Arial", 14, "bold")).pack(side=tk.LEFT)
+        
+        # Mevcut dizin göstergesi
+        self.current_dir_label = ttk.Label(header_frame, text=f"📁 {self.current_directory}", 
+                                          foreground="blue", font=("Consolas", 9))
+        self.current_dir_label.pack(side=tk.RIGHT)
+        
+        # Terminal çıktı alanı
+        output_frame = ttk.Frame(frame)
+        output_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
+        
+        self.terminal_output = tk.Text(output_frame, height=25, width=100, 
+                                      font=("Consolas", 10), bg="black", fg="white",
+                                      insertbackground="white", wrap=tk.WORD)
+        terminal_scrollbar = ttk.Scrollbar(output_frame, orient=tk.VERTICAL, command=self.terminal_output.yview)
+        self.terminal_output.configure(yscrollcommand=terminal_scrollbar.set)
+        
+        self.terminal_output.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        terminal_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        # Renk etiketleri
+        self.terminal_output.tag_configure("prompt", foreground="lime")
+        self.terminal_output.tag_configure("command", foreground="yellow")
+        self.terminal_output.tag_configure("output", foreground="white")
+        self.terminal_output.tag_configure("error", foreground="red")
+        self.terminal_output.tag_configure("info", foreground="cyan")
+        
+        # Komut giriş alanı
+        input_frame = ttk.Frame(frame)
+        input_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        ttk.Label(input_frame, text="Komut:", font=("Consolas", 10)).pack(side=tk.LEFT, padx=(0, 5))
+        
+        self.command_entry = ttk.Entry(input_frame, font=("Consolas", 10), width=80)
+        self.command_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 10))
+        
+        # Butonlar
+        button_frame = ttk.Frame(input_frame)
+        button_frame.pack(side=tk.RIGHT)
+        
+        ttk.Button(button_frame, text="Çalıştır", 
+                  command=lambda: self.execute_terminal_command()).pack(side=tk.LEFT, padx=2)
+        ttk.Button(button_frame, text="Temizle", 
+                  command=self.clear_terminal).pack(side=tk.LEFT, padx=2)
+        ttk.Button(button_frame, text="Dizin Değiştir", 
+                  command=self.change_directory).pack(side=tk.LEFT, padx=2)
+        
+        # Kısayol tuşları
+        def on_enter(event):
+            self.execute_terminal_command()
+            return "break"
+        
+        def on_up_arrow(event):
+            if self.command_history and self.history_index < len(self.command_history) - 1:
+                self.history_index += 1
+                self.command_entry.delete(0, tk.END)
+                self.command_entry.insert(0, self.command_history[-(self.history_index + 1)])
+            return "break"
+        
+        def on_down_arrow(event):
+            if self.command_history and self.history_index > 0:
+                self.history_index -= 1
+                self.command_entry.delete(0, tk.END)
+                self.command_entry.insert(0, self.command_history[-(self.history_index + 1)])
+            elif self.history_index == 0:
+                self.history_index = -1
+                self.command_entry.delete(0, tk.END)
+            return "break"
+        
+        self.command_entry.bind("<Return>", on_enter)
+        self.command_entry.bind("<Up>", on_up_arrow)
+        self.command_entry.bind("<Down>", on_down_arrow)
+        
+        # Alt bilgi
+        info_frame = ttk.Frame(frame)
+        info_frame.pack(fill=tk.X)
+        
+        info_text = ttk.Label(info_frame, 
+                             text="💡 claude [prompt]: AI session | auto [on|off|status]: Otomatik özellikler | ↑↓: Geçmiş",
+                             foreground="gray", font=("Arial", 8))
+        info_text.pack(anchor=tk.W)
+        
+        # Hoşgeldin mesajı
+        self.terminal_output.insert(tk.END, "🤖 Claude Session Manager - Akıllı Terminal\n", "info")
+        self.terminal_output.insert(tk.END, f"📁 Mevcut dizin: {self.current_directory}\n", "info")
+        self.terminal_output.insert(tk.END, "🚀 Özel komutlar:\n", "info")
+        self.terminal_output.insert(tk.END, "  • claude [mesaj]     → AI session başlat\n", "info")
+        self.terminal_output.insert(tk.END, "  • auto on/off/status → Otomatik özellikler\n", "info")
+        self.terminal_output.insert(tk.END, "  • cd [dizin]        → Dizin değiştir\n", "info")
+        self.terminal_output.insert(tk.END, "\n✨ Otomatik özellikler aktif - Claude kodları çalıştırılacak!\n\n", "info")
+        
+        # Focus'u komut giriş alanına ver
+        self.command_entry.focus()
+    
+    def execute_terminal_command(self):
+        command = self.command_entry.get().strip()
+        if not command:
+            return
+        
+        # Komut geçmişine ekle
+        if command not in self.command_history:
+            self.command_history.append(command)
+        if len(self.command_history) > 50:  # Son 50 komutu sakla
+            self.command_history = self.command_history[-50:]
+        self.history_index = -1
+        
+        # Prompt göster
+        prompt = f"{os.path.basename(self.current_directory)}> "
+        self.terminal_output.insert(tk.END, prompt, "prompt")
+        self.terminal_output.insert(tk.END, f"{command}\n", "command")
+        
+        # Özel komutları kontrol et
+        if command.lower().startswith("claude "):
+            # Claude'a özel prompt gönder
+            prompt = command[7:].strip()  # "claude " kısmını kaldır
+            if prompt:
+                self.terminal_output.insert(tk.END, f"Claude session başlatılıyor: '{prompt}'\n", "info")
+                self.start_claude_session_from_terminal(prompt)
+            else:
+                self.terminal_output.insert(tk.END, "Claude session başlatılıyor...\n", "info")
+                self.start_claude_session_from_terminal()
+            self.command_entry.delete(0, tk.END)
+            self.terminal_output.see(tk.END)
+            return
+        
+        if command.lower() in ["claude", "claude --help"]:
+            self.terminal_output.insert(tk.END, "Claude session başlatılıyor...\n", "info")
+            self.start_claude_session_from_terminal()
+            self.command_entry.delete(0, tk.END)
+            self.terminal_output.see(tk.END)
+            return
+        
+        if command.lower().startswith("auto "):
+            # Otomatik ayarları kontrol et
+            auto_command = command[5:].strip()
+            if auto_command == "on":
+                self.manager.config["auto_response_enabled"] = True
+                self.manager.config["auto_execute_code"] = True
+                self.manager.save_config(self.manager.config)
+                self.terminal_output.insert(tk.END, "✅ Otomatik özellikler AÇILDI\n", "info")
+            elif auto_command == "off":
+                self.manager.config["auto_response_enabled"] = False
+                self.manager.config["auto_execute_code"] = False
+                self.manager.save_config(self.manager.config)
+                self.terminal_output.insert(tk.END, "❌ Otomatik özellikler KAPATILDI\n", "warning")
+            elif auto_command == "status":
+                auto_resp = self.manager.config.get("auto_response_enabled", False)
+                auto_code = self.manager.config.get("auto_execute_code", False)
+                default_choice = self.manager.config.get("default_choice", "1")
+                self.terminal_output.insert(tk.END, f"🤖 Otomatik yanıt: {'AÇIK' if auto_resp else 'KAPALI'}\n", "info")
+                self.terminal_output.insert(tk.END, f"⚡ Otomatik kod: {'AÇIK' if auto_code else 'KAPALI'}\n", "info")
+                self.terminal_output.insert(tk.END, f"🎯 Varsayılan seçim: {default_choice}\n", "info")
+            else:
+                self.terminal_output.insert(tk.END, "❓ Kullanım: auto [on|off|status]\n", "warning")
+            self.command_entry.delete(0, tk.END)
+            self.terminal_output.see(tk.END)
+            return
+        
+        if command.lower().startswith("cd "):
+            self.change_directory_command(command[3:].strip())
+            self.command_entry.delete(0, tk.END)
+            self.terminal_output.see(tk.END)
+            return
+        
+        # Normal komut çalıştır
+        try:
+            process = subprocess.Popen(
+                command,
+                shell=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                cwd=self.current_directory
+            )
+            
+            stdout, stderr = process.communicate(timeout=30)
+            
+            if stdout:
+                self.terminal_output.insert(tk.END, stdout, "output")
+            if stderr:
+                self.terminal_output.insert(tk.END, stderr, "error")
+            
+            if process.returncode != 0:
+                self.terminal_output.insert(tk.END, f"Exit code: {process.returncode}\n", "error")
+                
+        except subprocess.TimeoutExpired:
+            self.terminal_output.insert(tk.END, "Komut zaman aşımına uğradı (30s)\n", "error")
+        except Exception as e:
+            self.terminal_output.insert(tk.END, f"Hata: {str(e)}\n", "error")
+        
+        self.terminal_output.insert(tk.END, "\n")
+        self.command_entry.delete(0, tk.END)
+        self.terminal_output.see(tk.END)
+    
+    def start_claude_session_from_terminal(self, custom_prompt=None):
+        def run_claude():
+            try:
+                prompt = custom_prompt or "Terminal'den başlatıldı"
+                success, response = self.manager.manual_session_start(prompt)
+                if success:
+                    self.terminal_output.insert(tk.END, "✅ Claude session başarıyla başlatıldı!\n", "info")
+                    
+                    # Yanıtı göster
+                    self.terminal_output.insert(tk.END, f"\n📝 Claude Yanıtı:\n{response}\n\n", "output")
+                    
+                    # Yanıtı analiz et ve kod varsa çalıştır
+                    analysis = self.manager.analyze_claude_response(response)
+                    if analysis["has_code"] and analysis["code_blocks"]:
+                        self.terminal_output.insert(tk.END, "🔍 Kod blokları tespit edildi, çalıştırılıyor...\n", "info")
+                        execution_result = self.manager.execute_code_from_response(analysis["code_blocks"])
+                        self.terminal_output.insert(tk.END, f"💻 Kod Çalıştırma Sonucu:\n{execution_result}\n\n", "output")
+                    
+                    # Seçenekler varsa otomatik yanıtla
+                    if analysis["has_choices"]:
+                        auto_response = self.manager.auto_respond_to_claude(analysis)
+                        if auto_response:
+                            self.terminal_output.insert(tk.END, f"🤖 Otomatik yanıt gönderiliyor: {auto_response}\n", "info")
+                            # Recursive call - otomatik yanıtı gönder
+                            self.start_claude_session_from_terminal(auto_response)
+                        else:
+                            self.terminal_output.insert(tk.END, "❓ Seçenekler mevcut ama otomatik yanıt kapalı\n", "warning")
+                else:
+                    self.terminal_output.insert(tk.END, f"❌ Claude session hatası: {response}\n", "error")
+                self.terminal_output.see(tk.END)
+            except Exception as e:
+                self.terminal_output.insert(tk.END, f"❌ Beklenmeyen hata: {str(e)}\n", "error")
+                self.terminal_output.see(tk.END)
+        
+        # Claude session'ı ayrı thread'de çalıştır
+        threading.Thread(target=run_claude, daemon=True).start()
+    
+    def change_directory_command(self, path):
+        try:
+            if not path:
+                path = os.path.expanduser("~")  # Home directory
+            
+            new_path = os.path.abspath(os.path.join(self.current_directory, path))
+            
+            if os.path.exists(new_path) and os.path.isdir(new_path):
+                self.current_directory = new_path
+                self.current_dir_label.config(text=f"📁 {self.current_directory}")
+                self.terminal_output.insert(tk.END, f"Dizin değiştirildi: {self.current_directory}\n", "info")
+            else:
+                self.terminal_output.insert(tk.END, f"Dizin bulunamadı: {path}\n", "error")
+        except Exception as e:
+            self.terminal_output.insert(tk.END, f"Dizin değiştirme hatası: {str(e)}\n", "error")
+    
+    def change_directory(self):
+        new_dir = simpledialog.askstring("Dizin Değiştir", f"Yeni dizin (mevcut: {self.current_directory}):")
+        if new_dir:
+            self.change_directory_command(new_dir)
+    
+    def clear_terminal(self):
+        self.terminal_output.delete(1.0, tk.END)
+        self.terminal_output.insert(tk.END, "Terminal temizlendi.\n\n", "info")
     
     def run(self):
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
