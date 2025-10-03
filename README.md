@@ -1,15 +1,44 @@
 # Claude Session Manager
 
-Claude Code için otomatik session yönetim sistemi. Bu program, Claude Code'un günlük token limitlerinden maksimum verim almak için otomatik olarak belirli aralıklarla yeni sessionlar başlatır.
+Gelişmiş Claude pencere izleme ve yönetim sistemi. Bu uygulama bilgisayarınızdaki tüm Claude pencerelerini izler ve çeşitli analitik bilgiler sağlar.
 
-## Özellikler
+## 🚀 Özellikler
 
-- **Otomatik Session Başlatma**: Belirlenen saatlerde otomatik olarak minimal prompt gönderir
-- **5 Saatlik Döngü**: Varsayılan olarak her 5 saatte bir yeni session başlatır
-- **GUI Arayüz**: Kolay kullanım için grafik arayüz
-- **Durum Takibi**: Anlık session durumu, kalan süre ve token bilgileri
-- **Özelleştirilebilir Ayarlar**: Prompt, zaman aralığı ve başlangıç saati ayarlanabilir
-- **Manuel Kontrol**: İsteğe bağlı manuel session başlatma
+### 1. 📊 Session İzleme
+- Açık Claude pencerelerini otomatik tespit
+- Session başlama zamanları ve süreleri
+- Aktif/kapalı session durumları
+- Gerçek zamanlı session listesi
+
+### 2. 💬 Prompt Günlüğü
+- Kullanıcı prompt'larını izleme ve kaydetme
+- Claude yanıtlarını takip etme
+- Conversation geçmişi
+- Prompt filtreleme ve arama
+
+### 3. ❓ Onay Sorusu Takibi
+- Claude'un sorduğu yes/no sorularını tespit
+- 1/2/3 şeklindeki seçim sorularını yakalama
+- Otomatik popup uyarıları
+- Onay geçmişi ve kayıtları
+
+### 4. ⏰ Limit Uyarıları
+- 5 saat limit yaklaştığında uyarı
+- "Approach 5 hour limit" mesajlarını yakalama
+- Limit süresi bilgilerini takip
+- Sesli ve görsel uyarılar
+
+### 5. 🎯 Token Takibi
+- Token kullanım tahmini
+- Günlük token limitleri
+- Mesaj başına ortalama token
+- Token kullanım analizi
+
+### 6. 📈 Canlı İzleme
+- Gerçek zamanlı sistem durumu
+- Log akışı
+- Hata ve uyarı takibi
+- Sistem performans metrikleri
 
 ## Kurulum
 

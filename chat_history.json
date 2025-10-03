@@ -82,5 +82,19 @@
     "response": "HATA: Hata: [WinError 2] Sistem belirtilen dosyayı bulamıyor",
     "type": "scheduled",
     "success": false
+  },
+  {
+    "timestamp": "2025-10-03T21:46:16.163397",
+    "prompt": "şu anda saat kaç",
+    "response": "Saat 21:46\n",
+    "type": "auto",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-03T21:46:16.164317",
+    "prompt": "şu anda saat kaç",
+    "response": "Saat 21:46\n",
+    "type": "manual",
+    "success": true
   }
 ]

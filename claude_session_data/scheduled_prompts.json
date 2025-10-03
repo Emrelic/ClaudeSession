@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "prompt": "şu anda saat kaç",
+    "type": "daily",
+    "status": "active",
+    "created": "2025-10-03T22:34:13.705712",
+    "last_run": null,
+    "next_run": null,
+    "run_count": 0,
+    "hour": 22,
+    "minute": 36
+  },
+  {
+    "id": 2,
+    "prompt": "saat kaö",
+    "type": "daily",
+    "status": "active",
+    "created": "2025-10-03T22:39:39.794985",
+    "last_run": null,
+    "next_run": null,
+    "run_count": 0,
+    "hour": 22,
+    "minute": 41
+  },
+  {
+    "id": 3,
+    "prompt": "şu anda saat kaç",
+    "type": "once",
+    "status": "active",
+    "created": "2025-10-03T22:53:03.771866",
+    "last_run": null,
+    "next_run": null,
+    "run_count": 0,
+    "date": "2025-10-03",
+    "hour": 22,
+    "minute": 54
+  },
+  {
+    "id": 4,
+    "prompt": "tarih ve saat kaç",
+    "type": "once",
+    "status": "active",
+    "created": "2025-10-03T23:54:47.385303",
+    "last_run": null,
+    "next_run": null,
+    "run_count": 0,
+    "date": "2025-10-03",
+    "hour": 23,
+    "minute": 55
+  },
+  {
+    "id": 5,
+    "prompt": "şu anda saat ve tarih bilgisini ver",
+    "type": "once",
+    "status": "active",
+    "created": "2025-10-04T00:33:08.835631",
+    "last_run": null,
+    "next_run": null,
+    "run_count": 0,
+    "date": "2025-10-04",
+    "hour": 0,
+    "minute": 35
+  },
+  {
+    "id": 6,
+    "prompt": "x",
+    "type": "hourly",
+    "interval": 5,
+    "status": "active",
+    "created": "2025-10-04T00:33:22.701690",
+    "last_run": null,
+    "run_count": 0
+  },
+  {
+    "id": 7,
+    "prompt": "Merhaba, nasılsın?",
+    "type": "hourly",
+    "status": "active",
+    "created": "2025-10-04T00:34:11.151516",
+    "last_run": null,
+    "next_run": null,
+    "run_count": 0,
+    "interval": 2
+  },
+  {
+    "id": 8,
+    "prompt": "şuanda saat kaç",
+    "type": "hourly",
+    "status": "active",
+    "created": "2025-10-04T00:35:59.307918",
+    "last_run": null,
+    "next_run": null,
+    "run_count": 0,
+    "interval": 2
+  }
+]
