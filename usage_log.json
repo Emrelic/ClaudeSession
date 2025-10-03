@@ -169,139 +169,111 @@
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T02:48:26.460704",
-      "hour": 2,
-      "date": "2025-10-02",
-      "session_count": 8,
-      "auto_session_active": true
-    },
-    {
-      "timestamp": "2025-10-02T03:48:27.335446",
-      "hour": 3,
-      "date": "2025-10-02",
-      "session_count": 8,
-      "auto_session_active": true
-    },
-    {
-      "timestamp": "2025-10-02T04:48:28.199762",
-      "hour": 4,
-      "date": "2025-10-02",
-      "session_count": 8,
-      "auto_session_active": true
-    },
-    {
-      "timestamp": "2025-10-02T05:48:29.021529",
-      "hour": 5,
-      "date": "2025-10-02",
-      "session_count": 8,
-      "auto_session_active": true
-    },
-    {
-      "timestamp": "2025-10-02T06:48:29.843215",
-      "hour": 6,
-      "date": "2025-10-02",
-      "session_count": 8,
-      "auto_session_active": true
-    },
-    {
-      "timestamp": "2025-10-02T08:13:06.208458",
-      "hour": 8,
-      "date": "2025-10-02",
-      "session_count": 8,
-      "auto_session_active": true
-    },
-    {
-      "timestamp": "2025-10-02T09:13:06.963084",
-      "hour": 9,
-      "date": "2025-10-02",
-      "session_count": 8,
-      "auto_session_active": true
-    },
-    {
-      "timestamp": "2025-10-02T10:13:07.776419",
+      "timestamp": "2025-10-02T10:47:04.967371",
       "hour": 10,
       "date": "2025-10-02",
-      "session_count": 8,
+      "session_count": 7,
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T11:04:00.147556",
+      "timestamp": "2025-10-02T11:04:01.231242",
       "hour": 11,
       "date": "2025-10-02",
-      "session_count": 8,
+      "session_count": 7,
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T11:13:08.763735",
+      "timestamp": "2025-10-02T11:09:26.767225",
       "hour": 11,
       "date": "2025-10-02",
-      "session_count": 8,
+      "session_count": 7,
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T15:49:45.055699",
+      "timestamp": "2025-10-02T12:09:27.702237",
+      "hour": 12,
+      "date": "2025-10-02",
+      "session_count": 7,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-02T13:09:27.870735",
+      "hour": 13,
+      "date": "2025-10-02",
+      "session_count": 7,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-02T14:09:28.150955",
+      "hour": 14,
+      "date": "2025-10-02",
+      "session_count": 7,
+      "auto_session_active": true
+    },
+    {
+      "timestamp": "2025-10-02T15:09:28.680099",
       "hour": 15,
       "date": "2025-10-02",
-      "session_count": 9,
+      "session_count": 7,
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T16:49:45.261829",
+      "timestamp": "2025-10-02T16:09:28.904739",
       "hour": 16,
       "date": "2025-10-02",
-      "session_count": 9,
+      "session_count": 7,
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T17:49:45.490846",
+      "timestamp": "2025-10-02T17:09:29.117416",
       "hour": 17,
       "date": "2025-10-02",
-      "session_count": 9,
+      "session_count": 7,
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T18:49:45.986754",
+      "timestamp": "2025-10-02T18:09:29.324226",
       "hour": 18,
       "date": "2025-10-02",
-      "session_count": 9,
+      "session_count": 7,
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T19:49:46.449399",
+      "timestamp": "2025-10-02T19:09:29.771405",
       "hour": 19,
       "date": "2025-10-02",
-      "session_count": 9,
+      "session_count": 7,
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T20:49:46.895958",
+      "timestamp": "2025-10-02T20:09:29.938310",
       "hour": 20,
       "date": "2025-10-02",
-      "session_count": 9,
+      "session_count": 7,
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T21:49:47.485721",
+      "timestamp": "2025-10-02T21:09:30.546653",
       "hour": 21,
       "date": "2025-10-02",
-      "session_count": 9,
+      "session_count": 7,
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T22:49:48.094821",
+      "timestamp": "2025-10-02T22:09:30.731126",
       "hour": 22,
       "date": "2025-10-02",
-      "session_count": 9,
+      "session_count": 7,
       "auto_session_active": true
     },
     {
-      "timestamp": "2025-10-02T23:49:48.878375",
+      "timestamp": "2025-10-02T23:09:31.041527",
       "hour": 23,
       "date": "2025-10-02",
-      "session_count": 9,
+      "session_count": 7,
       "auto_session_active": true
     }
   ],
   "daily_summary": {},
-  "last_check_time": "2025-10-02T23:49:48.878375"
+  "last_check_time": "2025-10-02T23:09:31.041527"
 }

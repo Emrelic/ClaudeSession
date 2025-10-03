@@ -58,5 +58,35 @@
     "command": "bu uygulama ne uygulamasıdır",
     "description": "bu uygulama ne uygulamasıdır",
     "enabled": true
+  },
+  {
+    "time": "10:13",
+    "command": "şu anda saat kaç",
+    "description": "",
+    "enabled": true
+  },
+  {
+    "time": "10:29",
+    "command": "saat kaç şu anda",
+    "description": "saat kaç şu anda",
+    "enabled": true
+  },
+  {
+    "time": "10:30",
+    "command": "şuanda saat kaç",
+    "description": "şuanda saat kaç",
+    "enabled": true
+  },
+  {
+    "time": "10:49",
+    "command": "şuanda saat kaç",
+    "description": "",
+    "enabled": true
+  },
+  {
+    "time": "11:01",
+    "command": "/usage",
+    "description": "",
+    "enabled": true
   }
 ]
