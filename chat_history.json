@@ -33,5 +33,54 @@
     "response": "Bu uygulama **Claude Session Manager** - Claude Code iÃ§in otomatik session yÃ¶netim sistemidir. \n\nTemel amacÄ±: Claude Code'un gÃ¼nlÃ¼k token limitlerinden maksimum verim almak iÃ§in otomatik olarak belirli aralÄ±klarla (varsayÄ±lan 5 saatte bir) yeni sessionlar baÅŸlatmak.\n\nAna iÅŸlevleri:\n- Belirlenen saatlerde otomatik session baÅŸlatma\n- GUI arayÃ¼zÃ¼ ile kolay yÃ¶netim \n- Session durumu ve kalan sÃ¼re takibi\n- Manuel session kontrolÃ¼\n- Ã–zelleÅŸtirilebilir ayarlar\n\nÃ–rnek kullanÄ±m senaryosu: Tokeniniz gece bitiÄŸi durumda, sistem sabah otomatik olarak fresh tokenlerle yeni session baÅŸlatÄ±r.\n",
     "type": "scheduled",
     "success": true
+  },
+  {
+    "timestamp": "2025-10-02T02:46:08.341919",
+    "prompt": "limit varmı",
+    "response": "Hangi konuda limit olup olmadÄ±ÄŸÄ±nÄ± merak ediyorsunuz? Daha spesifik olabilir misiniz? Ã–rneÄŸin:\n\n- API Ã§aÄŸrÄ± limitleri\n- Dosya boyutu limitleri\n- Kod satÄ±r sayÄ±sÄ± limitleri\n- Token limitleri\n- BaÅŸka bir ÅŸey\n\nHangi alanda limit kontrolÃ¼ yapmak istediÄŸinizi belirtirseniz size yardÄ±mcÄ± olabilirim.\n",
+    "type": "auto",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-02T11:02:00.053321",
+    "prompt": "/cost",
+    "response": "{\n  \"estimated_cost\": \"Maliyet bilgisi API'den alınamıyor\",\n  \"session_count\": 8,\n  \"last_session\": \"2025-10-02T02:46:08.340792\",\n  \"note\": \"Gerçek maliyet bilgisi için Claude hesabınızı kontrol edin\"\n}",
+    "type": "scheduled",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-02T11:04:00.159973",
+    "prompt": "/usage",
+    "response": "{\n  \"last_24_hours\": [\n    {\n      \"timestamp\": \"2025-10-01T04:23:47.621856\",\n      \"hour\": 4,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 0,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T05:23:48.533811\",\n      \"hour\": 5,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 0,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T06:23:49.388285\",\n      \"hour\": 6,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 0,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T07:35:13.017077\",\n      \"hour\": 7,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 0,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T08:35:13.941470\",\n      \"hour\": 8,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 0,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T10:33:33.092259\",\n      \"hour\": 10,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 0,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T10:41:36.681110\",\n      \"hour\": 10,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 1,\n      \"auto_session_active\": false\n    },\n    {\n      \"timestamp\": \"2025-10-01T10:51:47.480730\",\n      \"hour\": 10,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 3,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T10:59:11.011073\",\n      \"hour\": 10,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 3,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T11:10:25.167113\",\n      \"hour\": 11,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 3,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T12:53:02.372381\",\n      \"hour\": 12,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 5,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T13:53:03.297937\",\n      \"hour\": 13,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 5,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T14:53:03.491591\",\n      \"hour\": 14,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 5,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-01T15:53:04.192321\",\n      \"hour\": 15,\n      \"date\": \"2025-10-01\",\n      \"session_count\": 5,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-02T00:26:06.274121\",\n      \"hour\": 0,\n      \"date\": \"2025-10-02\",\n      \"session_count\": 5,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-02T02:48:26.460704\",\n      \"hour\": 2,\n      \"date\": \"2025-10-02\",\n      \"session_count\": 8,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-02T03:48:27.335446\",\n      \"hour\": 3,\n      \"date\": \"2025-10-02\",\n      \"session_count\": 8,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-02T04:48:28.199762\",\n      \"hour\": 4,\n      \"date\": \"2025-10-02\",\n      \"session_count\": 8,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-02T05:48:29.021529\",\n      \"hour\": 5,\n      \"date\": \"2025-10-02\",\n      \"session_count\": 8,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-02T06:48:29.843215\",\n      \"hour\": 6,\n      \"date\": \"2025-10-02\",\n      \"session_count\": 8,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-02T08:13:06.208458\",\n      \"hour\": 8,\n      \"date\": \"2025-10-02\",\n      \"session_count\": 8,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-02T09:13:06.963084\",\n      \"hour\": 9,\n      \"date\": \"2025-10-02\",\n      \"session_count\": 8,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-02T10:13:07.776419\",\n      \"hour\": 10,\n      \"date\": \"2025-10-02\",\n      \"session_count\": 8,\n      \"auto_session_active\": true\n    },\n    {\n      \"timestamp\": \"2025-10-02T11:04:00.147556\",\n      \"hour\": 11,\n      \"date\": \"2025-10-02\",\n      \"session_count\": 8,\n      \"auto_session_active\": true\n    }\n  ],\n  \"total_sessions_today\": 10,\n  \"last_update\": \"2025-10-02T11:04:00.147556\"\n}",
+    "type": "scheduled",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-02T11:05:02.384334",
+    "prompt": "/status",
+    "response": "{\n  \"claude_available\": true,\n  \"last_check\": \"2025-10-02T11:05:02.383848\",\n  \"session_count\": 8,\n  \"auto_session_running\": true\n}",
+    "type": "scheduled",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-02T11:39:21.163889",
+    "prompt": "saat şu anda kaç",
+    "response": "11:39:18 - 02.10.2025\n",
+    "type": "auto",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-02T11:39:21.164759",
+    "prompt": "saat şu anda kaç",
+    "response": "11:39:18 - 02.10.2025\n",
+    "type": "scheduled",
+    "success": true
+  },
+  {
+    "timestamp": "2025-10-02T15:49:45.052549",
+    "prompt": "şu anda saat kaç",
+    "response": "HATA: Claude komutu zaman aşımına uğradı",
+    "type": "scheduled",
+    "success": false
   }
 ]
