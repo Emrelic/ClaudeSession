@@ -93,5 +93,29 @@
     "next_run": null,
     "run_count": 0,
     "interval": 2
+  },
+  {
+    "id": 9,
+    "prompt": "saat ve tarih şu anda nedir",
+    "type": "hourly",
+    "status": "active",
+    "created": "2025-10-04T01:06:45.522275",
+    "last_run": null,
+    "next_run": null,
+    "run_count": 0,
+    "interval": 1
+  },
+  {
+    "id": 10,
+    "prompt": "devam et",
+    "type": "once",
+    "status": "active",
+    "created": "2025-10-04T12:53:59.138405",
+    "last_run": null,
+    "next_run": null,
+    "run_count": 0,
+    "date": "2025-10-04",
+    "hour": 14,
+    "minute": 1
   }
 ]

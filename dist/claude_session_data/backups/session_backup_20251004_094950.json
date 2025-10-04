@@ -1,0 +1,4214 @@
+{
+  "sessions": {
+    "9740_1378114": {
+      "id": "9740_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "pid": 9740,
+        "process_name": "studio64.exe",
+        "create_time": 1759514682.120982
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "1988_1378114": {
+      "id": "1988_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "msedge.exe",
+        "pid": 1988
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "3000_789684": {
+      "id": "3000_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 3000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "3000_461572": {
+      "id": "3000_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 3000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "3000_1378114": {
+      "id": "3000_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 3000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4196_789684": {
+      "id": "4196_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 4196
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4196_461572": {
+      "id": "4196_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 4196
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4196_1378114": {
+      "id": "4196_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 4196
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4788_789684": {
+      "id": "4788_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 4788
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4788_461572": {
+      "id": "4788_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 4788
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4788_1378114": {
+      "id": "4788_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "msedge.exe",
+        "pid": 4788
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "6328_789684": {
+      "id": "6328_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 6328
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "6328_461572": {
+      "id": "6328_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 6328
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "6328_1378114": {
+      "id": "6328_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 6328
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10472_789684": {
+      "id": "10472_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 10472
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10472_461572": {
+      "id": "10472_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 10472
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10472_1378114": {
+      "id": "10472_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "msedge.exe",
+        "pid": 10472
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10840_789684": {
+      "id": "10840_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 10840
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10840_461572": {
+      "id": "10840_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 10840
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10840_1378114": {
+      "id": "10840_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 10840
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "11252_789684": {
+      "id": "11252_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 11252
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "11252_461572": {
+      "id": "11252_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 11252
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "11252_1378114": {
+      "id": "11252_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 11252
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "12488_789684": {
+      "id": "12488_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 12488
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "12488_461572": {
+      "id": "12488_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 12488
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "12488_1378114": {
+      "id": "12488_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "msedge.exe",
+        "pid": 12488
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "14284_789684": {
+      "id": "14284_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 14284
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "14284_461572": {
+      "id": "14284_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 14284
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "14284_1378114": {
+      "id": "14284_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 14284
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "16872_789684": {
+      "id": "16872_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 16872
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "16872_461572": {
+      "id": "16872_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 16872
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "16872_1378114": {
+      "id": "16872_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 16872
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18132_789684": {
+      "id": "18132_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 18132
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18132_461572": {
+      "id": "18132_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 18132
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18132_1378114": {
+      "id": "18132_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "msedge.exe",
+        "pid": 18132
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18592_789684": {
+      "id": "18592_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 18592
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18592_461572": {
+      "id": "18592_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 18592
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18592_1378114": {
+      "id": "18592_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "msedge.exe",
+        "pid": 18592
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19212_789684": {
+      "id": "19212_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 19212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19212_461572": {
+      "id": "19212_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 19212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19212_1378114": {
+      "id": "19212_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 19212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19260_789684": {
+      "id": "19260_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 19260
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19260_461572": {
+      "id": "19260_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 19260
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19260_1378114": {
+      "id": "19260_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 19260
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "20000_789684": {
+      "id": "20000_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 20000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "20000_461572": {
+      "id": "20000_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 20000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "20000_1378114": {
+      "id": "20000_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "msedge.exe",
+        "pid": 20000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21184_789684": {
+      "id": "21184_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 21184
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21184_461572": {
+      "id": "21184_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 21184
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21184_1378114": {
+      "id": "21184_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 21184
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21584_789684": {
+      "id": "21584_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 21584
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21584_461572": {
+      "id": "21584_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 21584
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21584_1378114": {
+      "id": "21584_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 21584
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "22776_789684": {
+      "id": "22776_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 22776
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "22776_461572": {
+      "id": "22776_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 22776
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "22776_1378114": {
+      "id": "22776_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 22776
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23428_789684": {
+      "id": "23428_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 23428
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23428_461572": {
+      "id": "23428_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 23428
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23428_1378114": {
+      "id": "23428_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 23428
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23860_789684": {
+      "id": "23860_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 23860
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23860_461572": {
+      "id": "23860_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 23860
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23860_1378114": {
+      "id": "23860_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 23860
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "25532_789684": {
+      "id": "25532_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 25532
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "25532_461572": {
+      "id": "25532_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 25532
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "25532_1378114": {
+      "id": "25532_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 25532
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26552_789684": {
+      "id": "26552_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 26552
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26552_461572": {
+      "id": "26552_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 26552
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26552_1378114": {
+      "id": "26552_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "msedge.exe",
+        "pid": 26552
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26576_789684": {
+      "id": "26576_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 26576
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26576_461572": {
+      "id": "26576_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 26576
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26576_1378114": {
+      "id": "26576_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "msedge.exe",
+        "pid": 26576
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "27072_789684": {
+      "id": "27072_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 27072
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "27072_461572": {
+      "id": "27072_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 27072
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "27072_1378114": {
+      "id": "27072_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 27072
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "28804_789684": {
+      "id": "28804_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 28804
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "28804_461572": {
+      "id": "28804_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 28804
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "28804_1378114": {
+      "id": "28804_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "msedge.exe",
+        "pid": 28804
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30460_789684": {
+      "id": "30460_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 30460
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30460_461572": {
+      "id": "30460_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 30460
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30460_1378114": {
+      "id": "30460_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 30460
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30600_789684": {
+      "id": "30600_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 30600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30600_461572": {
+      "id": "30600_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 30600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30600_1378114": {
+      "id": "30600_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 30600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30732_789684": {
+      "id": "30732_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 30732
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30732_461572": {
+      "id": "30732_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 30732
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30732_1378114": {
+      "id": "30732_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 30732
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31212_789684": {
+      "id": "31212_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 31212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31212_461572": {
+      "id": "31212_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 31212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31212_1378114": {
+      "id": "31212_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 31212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31564_789684": {
+      "id": "31564_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 31564
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31564_461572": {
+      "id": "31564_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 31564
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31564_1378114": {
+      "id": "31564_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 31564
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31600_789684": {
+      "id": "31600_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 31600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31600_461572": {
+      "id": "31600_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 31600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31600_1378114": {
+      "id": "31600_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 31600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "32856_789684": {
+      "id": "32856_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 32856
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "32856_461572": {
+      "id": "32856_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 32856
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "32856_1378114": {
+      "id": "32856_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 32856
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "33112_789684": {
+      "id": "33112_789684",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 33112
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "33112_461572": {
+      "id": "33112_461572",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 33112
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "33112_1378114": {
+      "id": "33112_1378114",
+      "start_time": "2025-10-04T09:19:50.658912",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378114,
+        "title": "ClaudeSession",
+        "browser": "chrome.exe",
+        "pid": 33112
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "32288_789684": {
+      "id": "32288_789684",
+      "start_time": "2025-10-04T09:21:47.654166",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "pid": 32288,
+        "process_name": "main_application.exe",
+        "create_time": 1759558787.7525399
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "32288_461572": {
+      "id": "32288_461572",
+      "start_time": "2025-10-04T09:21:47.654166",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "pid": 32288,
+        "process_name": "main_application.exe",
+        "create_time": 1759558787.7525399
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "1988_789684": {
+      "id": "1988_789684",
+      "start_time": "2025-10-04T09:21:47.654166",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 789684,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 1988
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "1988_461572": {
+      "id": "1988_461572",
+      "start_time": "2025-10-04T09:21:47.654166",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461572,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 1988
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "16448_3081574": {
+      "id": "16448_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "pid": 16448,
+        "process_name": "python.exe",
+        "create_time": 1759558909.0148883
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "16448_461724": {
+      "id": "16448_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "pid": 16448,
+        "process_name": "python.exe",
+        "create_time": 1759558909.0148883
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "1988_3081574": {
+      "id": "1988_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 1988
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "1988_461724": {
+      "id": "1988_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 1988
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "3000_3081574": {
+      "id": "3000_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 3000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "3000_461724": {
+      "id": "3000_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 3000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4196_3081574": {
+      "id": "4196_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 4196
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4196_461724": {
+      "id": "4196_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 4196
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4788_3081574": {
+      "id": "4788_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 4788
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4788_461724": {
+      "id": "4788_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 4788
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "6328_3081574": {
+      "id": "6328_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 6328
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "6328_461724": {
+      "id": "6328_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 6328
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10472_3081574": {
+      "id": "10472_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 10472
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10472_461724": {
+      "id": "10472_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 10472
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10840_3081574": {
+      "id": "10840_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 10840
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10840_461724": {
+      "id": "10840_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 10840
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "11252_3081574": {
+      "id": "11252_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 11252
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "11252_461724": {
+      "id": "11252_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 11252
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "12488_3081574": {
+      "id": "12488_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 12488
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "12488_461724": {
+      "id": "12488_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 12488
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "14284_3081574": {
+      "id": "14284_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 14284
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "14284_461724": {
+      "id": "14284_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 14284
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "16872_3081574": {
+      "id": "16872_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 16872
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "16872_461724": {
+      "id": "16872_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 16872
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18132_3081574": {
+      "id": "18132_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 18132
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18132_461724": {
+      "id": "18132_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 18132
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18592_3081574": {
+      "id": "18592_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 18592
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18592_461724": {
+      "id": "18592_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 18592
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19212_3081574": {
+      "id": "19212_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 19212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19212_461724": {
+      "id": "19212_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 19212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19260_3081574": {
+      "id": "19260_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 19260
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19260_461724": {
+      "id": "19260_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 19260
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "20000_3081574": {
+      "id": "20000_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 20000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "20000_461724": {
+      "id": "20000_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 20000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21184_3081574": {
+      "id": "21184_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 21184
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21184_461724": {
+      "id": "21184_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 21184
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21584_3081574": {
+      "id": "21584_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 21584
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21584_461724": {
+      "id": "21584_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 21584
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "22776_3081574": {
+      "id": "22776_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 22776
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "22776_461724": {
+      "id": "22776_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 22776
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23428_3081574": {
+      "id": "23428_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 23428
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23428_461724": {
+      "id": "23428_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 23428
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23860_3081574": {
+      "id": "23860_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 23860
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23860_461724": {
+      "id": "23860_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 23860
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "25532_3081574": {
+      "id": "25532_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 25532
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "25532_461724": {
+      "id": "25532_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 25532
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26552_3081574": {
+      "id": "26552_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 26552
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26552_461724": {
+      "id": "26552_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 26552
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26576_3081574": {
+      "id": "26576_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 26576
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26576_461724": {
+      "id": "26576_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 26576
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "27072_3081574": {
+      "id": "27072_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 27072
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "27072_461724": {
+      "id": "27072_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 27072
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "28804_3081574": {
+      "id": "28804_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "msedge.exe",
+        "pid": 28804
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "28804_461724": {
+      "id": "28804_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "msedge.exe",
+        "pid": 28804
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30460_3081574": {
+      "id": "30460_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 30460
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30460_461724": {
+      "id": "30460_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 30460
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30600_3081574": {
+      "id": "30600_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 30600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30600_461724": {
+      "id": "30600_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 30600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30732_3081574": {
+      "id": "30732_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 30732
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30732_461724": {
+      "id": "30732_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 30732
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31212_3081574": {
+      "id": "31212_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 31212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31212_461724": {
+      "id": "31212_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 31212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31564_3081574": {
+      "id": "31564_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 31564
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31564_461724": {
+      "id": "31564_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 31564
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31600_3081574": {
+      "id": "31600_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 31600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31600_461724": {
+      "id": "31600_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 31600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "32856_3081574": {
+      "id": "32856_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 32856
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "32856_461724": {
+      "id": "32856_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 32856
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "33112_3081574": {
+      "id": "33112_3081574",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 3081574,
+        "title": "Claude Session Manager - Gelişmiş İzleme Sistemi",
+        "browser": "chrome.exe",
+        "pid": 33112
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "33112_461724": {
+      "id": "33112_461724",
+      "start_time": "2025-10-04T09:21:58.172329",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 461724,
+        "title": "Claude Session Monitor",
+        "browser": "chrome.exe",
+        "pid": 33112
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "22240_1378746": {
+      "id": "22240_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "pid": 22240,
+        "process_name": "python.exe",
+        "create_time": 1759558915.4225693
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "1988_1378746": {
+      "id": "1988_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "msedge.exe",
+        "pid": 1988
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "3000_1378746": {
+      "id": "3000_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 3000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4196_1378746": {
+      "id": "4196_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 4196
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "4788_1378746": {
+      "id": "4788_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "msedge.exe",
+        "pid": 4788
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "6328_1378746": {
+      "id": "6328_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 6328
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10472_1378746": {
+      "id": "10472_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "msedge.exe",
+        "pid": 10472
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "10840_1378746": {
+      "id": "10840_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 10840
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "11252_1378746": {
+      "id": "11252_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 11252
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "12488_1378746": {
+      "id": "12488_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "msedge.exe",
+        "pid": 12488
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "14284_1378746": {
+      "id": "14284_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 14284
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "16872_1378746": {
+      "id": "16872_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 16872
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18132_1378746": {
+      "id": "18132_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "msedge.exe",
+        "pid": 18132
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "18592_1378746": {
+      "id": "18592_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "msedge.exe",
+        "pid": 18592
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19212_1378746": {
+      "id": "19212_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 19212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "19260_1378746": {
+      "id": "19260_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 19260
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "20000_1378746": {
+      "id": "20000_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "msedge.exe",
+        "pid": 20000
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21184_1378746": {
+      "id": "21184_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 21184
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "21584_1378746": {
+      "id": "21584_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 21584
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "22776_1378746": {
+      "id": "22776_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 22776
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23428_1378746": {
+      "id": "23428_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 23428
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "23860_1378746": {
+      "id": "23860_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 23860
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "25532_1378746": {
+      "id": "25532_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 25532
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26552_1378746": {
+      "id": "26552_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "msedge.exe",
+        "pid": 26552
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "26576_1378746": {
+      "id": "26576_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "msedge.exe",
+        "pid": 26576
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "27072_1378746": {
+      "id": "27072_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 27072
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "28804_1378746": {
+      "id": "28804_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "msedge.exe",
+        "pid": 28804
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30460_1378746": {
+      "id": "30460_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 30460
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30600_1378746": {
+      "id": "30600_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 30600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "30732_1378746": {
+      "id": "30732_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 30732
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31212_1378746": {
+      "id": "31212_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 31212
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31564_1378746": {
+      "id": "31564_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 31564
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "31600_1378746": {
+      "id": "31600_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 31600
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "32856_1378746": {
+      "id": "32856_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 32856
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    },
+    "33112_1378746": {
+      "id": "33112_1378746",
+      "start_time": "2025-10-04T09:23:20.961892",
+      "last_seen": "2025-10-04T09:49:45.545282",
+      "window_info": {
+        "hwnd": 1378746,
+        "title": "Claude Session Manager",
+        "browser": "chrome.exe",
+        "pid": 33112
+      },
+      "prompt_count": 0,
+      "warnings": [],
+      "status": "active"
+    }
+  },
+  "prompt_logs": [],
+  "alerts": [
+    {
+      "timestamp": "2025-10-04T09:19:50.658923",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "9740_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:19:51.757357",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "1988_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:19:52.851796",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "3000_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:19:53.949916",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "3000_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:19:55.052826",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "3000_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:19:56.144817",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "4196_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:19:57.246766",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "4196_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:19:58.346389",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "4196_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:19:59.439789",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "4788_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:00.537634",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "4788_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:01.642611",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "4788_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:02.741397",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "6328_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:03.843545",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "6328_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:04.939888",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "6328_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:06.039378",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "10472_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:07.134195",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "10472_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:08.231108",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "10472_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:09.326375",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "10840_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:10.424021",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "10840_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:11.524855",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "10840_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:12.613640",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "11252_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:13.711857",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "11252_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:14.803137",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "11252_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:15.898616",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "12488_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:16.992610",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "12488_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:18.089480",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "12488_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:19.182645",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "14284_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:20.282237",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "14284_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:21.384769",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "14284_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:22.469923",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "16872_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:23.563128",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "16872_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:24.663995",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "16872_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:25.764296",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "18132_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:26.864483",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "18132_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:27.964829",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "18132_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:29.061573",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "18592_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:30.156090",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "18592_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:31.258461",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "18592_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:32.352700",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "19212_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:33.453841",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "19212_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:34.550772",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "19212_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:35.649751",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "19260_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:36.746293",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "19260_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:37.849612",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "19260_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:38.940635",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "20000_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:40.041415",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "20000_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:41.141130",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "20000_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:42.242754",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "21184_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:43.333052",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "21184_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:44.434451",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "21184_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:45.536877",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "21584_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:46.635122",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "21584_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:47.726540",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "21584_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:48.818616",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "22776_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:49.918500",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "22776_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:51.012550",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "22776_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:52.107216",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "23428_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:53.208728",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "23428_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:54.303371",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "23428_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:55.401596",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "23860_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:56.498611",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "23860_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:57.596486",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "23860_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:58.695143",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "25532_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:20:59.792801",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "25532_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:00.880095",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "25532_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:01.980785",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "26552_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:03.082673",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "26552_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:04.183154",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "26552_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:05.275864",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "26576_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:06.371725",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "26576_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:07.464639",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "26576_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:08.560266",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "27072_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:09.661168",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "27072_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:10.761513",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "27072_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:11.857077",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "28804_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:12.951492",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "28804_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:14.048467",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "28804_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:15.145931",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "30460_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:16.243070",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "30460_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:17.335052",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "30460_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:18.437654",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "30600_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:19.544826",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "30600_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:20.636301",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "30600_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:21.729740",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "30732_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:22.824465",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "30732_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:23.926337",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "30732_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:25.020087",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "31212_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:26.117509",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "31212_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:27.220062",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "31212_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:28.312309",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "31564_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:29.410625",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "31564_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:30.508257",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "31564_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:31.600782",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "31600_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:32.699437",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "31600_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:33.806957",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "31600_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:34.908687",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "32856_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:36.012492",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "32856_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:37.105079",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "32856_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:38.206755",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "33112_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:39.305831",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "33112_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:40.401364",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: ClaudeSession",
+      "session_id": "33112_1378114"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:47.654179",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "32288_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:48.747467",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "32288_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:49.838688",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "1988_789684"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:50.926932",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "1988_461572"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:58.172350",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "16448_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:21:59.260491",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "16448_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:00.357108",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "1988_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:01.452644",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "1988_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:02.554401",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "3000_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:03.653955",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "3000_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:04.754922",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "4196_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:05.845350",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "4196_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:06.931721",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "4788_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:08.031128",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "4788_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:09.129620",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "6328_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:10.221747",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "6328_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:11.316321",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "10472_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:12.411012",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "10472_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:13.506550",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "10840_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:14.605534",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "10840_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:15.702907",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "11252_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:16.801125",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "11252_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:17.893849",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "12488_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:18.991091",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "12488_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:20.082628",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "14284_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:21.181652",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "14284_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:22.285667",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "16872_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:23.382614",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "16872_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:24.483322",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "18132_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:25.577006",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "18132_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:26.666613",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "18592_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:27.763353",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "18592_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:28.854123",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "19212_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:29.941920",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "19212_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:31.023488",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "19260_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:32.118335",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "19260_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:33.211635",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "20000_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:34.303195",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "20000_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:35.400060",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "21184_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:36.493838",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "21184_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:37.590262",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "21584_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:38.681667",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "21584_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:39.771041",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "22776_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:40.872860",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "22776_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:41.971891",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "23428_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:43.062063",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "23428_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:44.152940",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "23860_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:45.239767",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "23860_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:46.342644",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "25532_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:47.438361",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "25532_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:48.529420",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "26552_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:49.620745",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "26552_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:50.711885",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "26576_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:51.802724",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "26576_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:52.895507",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "27072_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:53.989786",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "27072_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:55.090907",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "28804_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:56.182675",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "28804_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:57.286744",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "30460_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:58.377398",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "30460_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:22:59.470741",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "30600_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:00.564437",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "30600_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:01.661575",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "30732_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:02.755348",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "30732_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:03.856557",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "31212_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:04.953842",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "31212_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:06.052965",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "31564_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:07.151536",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "31564_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:08.247597",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "31600_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:09.337350",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "31600_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:10.434755",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "32856_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:11.524130",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "32856_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:12.617200",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager - Gelişmiş İzleme Sistemi",
+      "session_id": "33112_3081574"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:13.709131",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Monitor",
+      "session_id": "33112_461724"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:20.961915",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "22240_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:22.056921",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "1988_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:23.150071",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "3000_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:24.240562",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "4196_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:25.327862",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "4788_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:26.418629",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "6328_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:27.510877",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "10472_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:28.602291",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "10840_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:29.704518",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "11252_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:30.801943",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "12488_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:31.894187",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "14284_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:32.987028",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "16872_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:34.087875",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "18132_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:35.187504",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "18592_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:36.291118",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "19212_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:37.385305",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "19260_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:38.485731",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "20000_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:39.582578",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "21184_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:40.680272",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "21584_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:41.772485",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "22776_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:42.867324",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "23428_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:43.962477",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "23860_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:45.045173",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "25532_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:46.146948",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "26552_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:47.248315",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "26576_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:48.345857",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "27072_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:49.439083",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "28804_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:50.534068",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "30460_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:51.629772",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "30600_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:52.723375",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "30732_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:53.810542",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "31212_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:54.903679",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "31564_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:55.997039",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "31600_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:57.091273",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "32856_1378746"
+    },
+    {
+      "timestamp": "2025-10-04T09:23:58.185508",
+      "type": "session_start",
+      "message": "Yeni Claude session başladı: Claude Session Manager",
+      "session_id": "33112_1378746"
+    }
+  ],
+  "timestamp": "2025-10-04T09:49:50.348070"
+}

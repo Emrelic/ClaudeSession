@@ -18,7 +18,11 @@
       "Bash(tasklist:*)",
       "Bash(claude --print \"test\")",
       "Bash(timeout:*)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(buildozer:*)",
+      "Bash(pyinstaller:*)",
+      "Bash(.distmain_application.exe)",
+      "Bash(main_application.exe)"
     ],
     "deny": [],
     "ask": []

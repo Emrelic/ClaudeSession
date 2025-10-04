@@ -10,6 +10,7 @@ from confirmation_detector import ConfirmationDetector
 from limit_tracker import LimitTracker
 from token_tracker import TokenTracker
 from scheduler_system import ScheduledPromptSystem
+from advanced_scheduler import AdvancedScheduler
 
 class ClaudeSessionApp:
     def __init__(self):
@@ -30,6 +31,7 @@ class ClaudeSessionApp:
         self.limit_tracker = LimitTracker(self.base_monitor)
         self.token_tracker = TokenTracker(self.base_monitor)
         self.scheduler_system = ScheduledPromptSystem(self.base_monitor)
+        self.advanced_scheduler = AdvancedScheduler(self.base_monitor)
         
         # UI bileşenleri
         self.create_main_ui()
@@ -79,6 +81,8 @@ class ClaudeSessionApp:
                   command=self.token_tracker.show_token_dashboard).pack(side="left", padx=5)
         ttk.Button(control_frame, text="Zamanlanmış Prompt", 
                   command=self.scheduler_system.show_scheduler_dashboard).pack(side="left", padx=5)
+        ttk.Button(control_frame, text="🎯 Hedefli Prompt", 
+                  command=self.advanced_scheduler.show_advanced_scheduler).pack(side="left", padx=5)
         ttk.Button(control_frame, text="Ayarlar", 
                   command=self.show_settings).pack(side="left", padx=5)
         
